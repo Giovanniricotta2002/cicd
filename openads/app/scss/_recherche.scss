@@ -1,0 +1,83 @@
+@mixin searchBlink($hover, $color1, $color2: $color1) {
+    animation: blinkSearch#{$hover} 1.5s infinite ;
+    @keyframes blinkSearch#{$hover} {
+        0% {
+          background-color: $color1;
+        }
+        50% {
+          background-color: $color2;
+        }
+        100% {
+            background-color: $color1;
+          }
+      }
+  }
+
+#adv-search-adv-fields , #adv-search-classic-fields {
+    padding-top: 0.5em;
+    box-sizing: border-box;
+    .field {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        grid-column: unset;
+    }
+    .field[class*="field-type-date"] .form-content, [class*="field-type-date"] .form-content {
+        gap: 2px;
+    }
+    #form-content  {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        align-items: flex-end;
+        gap:  1em;
+        > div {
+            width: 100%;
+        }
+    }
+    .adv-search-helptext {
+        font-style: italic;
+        color: #999;
+        font-size: 0.9em;
+    }
+    .bloc.intervaldate {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: .2em 1em;
+        .bloc-titre {
+            grid-column: 1/3;
+        }
+    }
+}
+
+#adv-search-classic-fields {
+    label {
+        font-weight: 600;
+        margin-top: .5em;
+    }
+    input {
+        display: block;
+        width: 75%;
+        margin: .5em 0;
+    }
+}
+
+//Legacy
+
+ /**
+  * ADVS_SEARCH - highlight.
+  */
+  .advs-active-field-search {
+    border: 1px solid #31c29e;
+  }
+  .advs-unvalidate-field-search {
+    border: 1px solid $brandColor !important;
+    &.ui-button {
+        @include searchBlink("notHover", $brandDark, #31c29e); 
+        border-color: transparent;
+        &:hover {
+            @include searchBlink("Hover", darken($brandColor, 35%)); 
+        }
+    } 
+  }
+
+

@@ -1,0 +1,10 @@
+{
+  "message": {
+    "type": "Incomplétude|complétude",
+    "contenu": "Le dossier a été déclaré complet|incomplet par la collectivité",
+    "categorie": "platau"
+  },
+  "external_uids": {
+    "dossier": "7SZ-SX8-TR4"
+  }
+}

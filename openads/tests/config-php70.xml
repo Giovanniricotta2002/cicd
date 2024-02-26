@@ -1,0 +1,10 @@
+<phpunit>
+  <testsuites>
+    <testsuite name="openads">
+      <file>testGeneral_php70.php</file>
+      <file>testImportSpecific_php70.php</file>
+      <file>testREST_php70.php</file>
+      <file>testDigitalizedDocument_php70.php</file>
+    </testsuite>
+  </testsuites>
+</phpunit>

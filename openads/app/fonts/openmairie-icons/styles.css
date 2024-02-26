@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "openmairie-icons";
+  src:url("fonts/openmairie-icons.eot");
+  src:url("fonts/openmairie-icons.eot?#iefix") format("embedded-opentype"),
+    url("fonts/openmairie-icons.woff") format("woff"),
+    url("fonts/openmairie-icons.ttf") format("truetype"),
+    url("fonts/openmairie-icons.svg#openmairie-icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+[data-icon]:before {
+  font-family: "openmairie-icons" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="omi-"]:before,
+[class*=" omi-"]:before {
+  font-family: "openmairie-icons" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.omi-alert-multiple-fill:before {
+  content: "\61";
+}
+.omi-alert-multiple-line:before {
+  content: "\62";
+}
+.omi-add-multiple-box-fill:before {
+  content: "\63";
+}
+.omi-add-multiple-box-line:before {
+  content: "\64";
+}
+.omi-add-multiple:before {
+  content: "\65";
+}

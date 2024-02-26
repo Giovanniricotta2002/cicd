@@ -1,0 +1,49 @@
+div[aria-labelledby="ui-dialog-title-sousform-geolocalisation_sig"] {
+
+    /* Aligne bouton au centre*/
+    .alignBtnCenter {
+        width: 100%;
+        text-align: center;
+    }
+
+    .alignBtnCenter input {
+        padding: 0 20%;
+    }
+
+    .sousform-geolocalisation {
+        width: 100%;
+        border-spacing: 5px;
+        gap: 2em;
+    }
+
+
+    .sousform-geolocalisation {
+        display: flex;
+        width: 75vw;
+        @media screen and (max-width: 1300px ) {
+            flex-direction: column;
+        }
+    }
+
+    .sousform-geolocalisation>div {
+        flex: 3;
+    }
+
+    div.list-buttons-geolocalisation {
+        flex: 4;
+        div.field.field-type-static:not([class$=field-type-hidden]):not([class$=field-type-hiddendate]):not(.field-type-previsualiser_pdf):not([class*=field-type-html]) {
+            font-size: 0.9em;
+            grid-template-columns: minmax(250px, 1fr) 4fr;
+        }
+
+        .form-content {
+            border: none;
+        }
+
+        .bloc-titre {
+            font-size: 1.1em;
+        }
+    }
+
+
+}

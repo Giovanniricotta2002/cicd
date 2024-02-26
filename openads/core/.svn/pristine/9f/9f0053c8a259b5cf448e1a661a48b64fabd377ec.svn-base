@@ -1,0 +1,11 @@
+<?php
+/**
+ * Ce script n'existe que pour une raison de rétrocompatibilité depuis la version 4.8.0.
+ *
+ * @package framework_openmairie
+ * @version SVN : $Id$
+ */
+
+if (file_exists("../gen/sql/pgsql/om_sig_map.form.inc.php")) {
+    include "../gen/sql/pgsql/om_sig_map.form.inc.php";
+}

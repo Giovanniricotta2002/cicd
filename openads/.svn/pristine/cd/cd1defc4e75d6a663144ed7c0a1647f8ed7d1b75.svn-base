@@ -1,0 +1,38 @@
+// Import Inter font (https://github.com/rsms/inter) ; free and open-source font family by RSMS ; Full doc https://rsms.me/inter/
+@import "../../node_modules/inter-ui/inter.css";
+
+html { font-family: "Inter", "Helvetica Neue", "Helvetica", "Arial", "system-ui"; }
+
+// // Import IBM Plex Mono, open-source monospace font-family designed by IBM
+// @import url('https://use.typekit.net/dfp0xga.css');
+// ;
+
+
+// Import Remixicon (Icon font)
+
+@import "../../node_modules/remixicon/fonts/remixicon.css";
+
+$interFont : "Inter", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+
+// Import custom font openmairie-icons 
+@import "../fonts/openmairie-icons/styles.css";
+
+i[class^="ri-"] {
+  font-size: 1.25em;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+h3 {
+    font-size: 16px;
+}
+
+body {
+    font-size: 14px;
+}

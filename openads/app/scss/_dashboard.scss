@@ -1,0 +1,115 @@
+
+
+#dashboard .widget-header-move {
+    cursor: move;
+}
+
+
+/* #dashboard #info+[class~="col"] {
+    display: flex;
+    gap: 10px;
+}
+ */
+/* #dashboard #info+[class*="col"] {
+    display: flex;
+    gap: 20px;
+} */
+
+#dashboard .col1 .column,
+#dashboard .col2 .column {
+     width: calc(100%/3);
+}
+
+@for  $i from 3 through 12 {
+    #dashboard .col#{$i} .column {
+        /* width: calc(100%/$i); */
+        width: 100%;
+   }
+}
+
+.both {
+    display: none;
+    
+}
+
+// WIDGETS 
+
+#dashboard #info~[class*="col"]{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); 
+    grid-template-rows:auto 1fr;
+    gap: 1em;
+    [id^="widget_"].widget.ui-widget.ui-widget-content {
+        border: none;
+        box-shadow: 0 2px 6px 0 rgba(0, 0, 0, .15);
+        padding: 1em;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        background: $blanc;
+    
+        .widget-header {
+            display: flex;
+            align-items: center;
+            gap: .5em;
+            background: none;
+            border: none;
+            font-size: 1.1em;
+            margin-bottom: 1em;
+            color: $brandDark;
+        }
+    
+        .widget-header .ui-icon {
+            cursor: pointer;
+            order: 3;
+            align-self: center;
+            &:first-of-type{
+                margin-left: auto;
+            }
+        }
+        .widget-content {
+            .formEntete {
+                border: none;
+            }
+            h4 {
+                margin-bottom: .5em;
+            }
+        }
+        #widget_recherche_dossier_form, 
+        [id*="recherche"]{
+            .formEntete {
+                padding: 10px 0;
+            }
+            .field.field-type-text {
+                position: relative;
+                margin: 0;
+                .form-libelle {
+                    position: absolute;
+                    top: 50%;
+                    left: .5em;
+                    transform: translateY(-50%);
+                }
+                .form-content input{
+                    padding-left: 2.5em;
+                }
+            }
+            .field.field-type-select {
+                margin-top: 1.5em;
+            }
+        }
+        .widget-footer {
+            margin-top: 1.5em;
+            a {
+                border: 2px solid $brandColor;
+                color: $brandColor;
+                padding: .2em .4em;
+                border-radius: 8px;
+                transition: all 0.2s;
+                font-weight: 600;
+                &:hover {
+                    color: $brandDark;
+                    border-color: $brandDark;
+                }
+            }
+        }
+    }    
+}

@@ -1,0 +1,47 @@
+{
+    "demandeur": [
+        {
+            "notification": "t",
+            "type_demandeur": "petitionnaire",
+            "courriel": "test@test.fr",
+            "bp": null,
+            "cedex": null,
+            "complement": null,
+            "lieu_dit": null,
+            "code_postal": "43000",
+            "localite": "MARSEILLE",
+            "numero": "16",
+            "voie": "Voie",
+            "telephone_fixe": "0404040404",
+            "qualite": "personne_morale",
+            "personne_morale_denomination": "PLOPY",
+            "personne_morale_raison_sociale": "PLOP",
+            "personne_morale_siret": "24430000000000",
+            "personne_morale_categorie_juridique": null,
+            "personne_morale_civilite": "4",
+            "personne_morale_nom": "JOUBERT",
+            "personne_morale_prenom": "Michel",
+            "petitionnaire_principal": "t"
+        }
+    ],
+    "donnees_techniques": {
+        "enga_decla_date": "2022-01-11",
+        "enga_decla_lieu": "MARSEILLE"
+    },
+    "dossier": {
+        "depot_electronique": "t",
+        "insee": "13055",
+        "terrain_adresse_voie_numero": null,
+        "terrain_adresse_voie": "Avenue Plop",
+        "terrain_adresse_complement": null,
+        "terrain_adresse_lieu_dit": null,
+        "terrain_adresse_code_postal": "130000",
+        "terrain_adresse_localite": "Marseille",
+        "terrain_superficie": "3568",
+        "terrain_references_cadastrales": "000AA0000;",
+        "dossier_autorisation_type_detaille_code": "PCI"
+    },
+    "external_uids": {
+        "demande": "permis-amenager/16"
+    }
+}

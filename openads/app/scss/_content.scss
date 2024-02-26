@@ -1,0 +1,33 @@
+#content {
+    #title h2{
+/*         display: flex;
+        align-items: center;
+        justify-content: flex-start; */
+        font-size: 1.2rem;
+        font-weight: 500;
+        span {
+            vertical-align: bottom;
+        }
+        .arrow-right-16:before {
+            content: "\EA6E" ;
+        }
+        .libelle { 
+            text-transform: uppercase; 
+        }
+
+    }
+
+    .ui-widget-header {
+        font-weight: 1.125em;
+    }
+
+    .ui-tabs-nav li a {
+        text-transform: capitalize;
+        @media screen and (-webkit-min-device-pixel-ratio: 0) {
+            text-transform: unset;
+            &::first-letter {
+                text-transform: capitalize;
+            }
+          }
+    }
+}

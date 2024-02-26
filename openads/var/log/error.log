@@ -1,0 +1,16 @@
+
+2023-10-26 12:29:32 ERROR [admin] /openads/app/index.php?module=form&obj=document_numerise_traitement_metadonnees&action=100&idx=0
+2023-10-26 12:29:32 Filesystem storage - update_metadata : Erreur dans l'extraction des metadonnees (fichier: 79d433ed40812262504c289980960f18) [DEBUG]
+
+
+2023-10-26 12:43:17 ERROR [admin] /openads/app/index.php?module=form&obj=sous_dossier&action=8&idxformulaire=CU0130552300001P0&retourformulaire=dossier_instruction&advs_id=&premiersf=0&trisf=&valide=&sous_dossier_type=51
+2023-10-26 12:43:17 1.097 : class utils - dossier::get_di_numero_suffixe(): Dossier 'CU0130552300001P0SD101' suffixes differs (new:1 != old:0) [DEBUG]
+
+
+2023-10-30 14:33:24 ERROR [admin] /openads/app/index.php?module=form&obj=document_numerise_traitement_metadonnees&action=100&idx=0
+2023-10-30 14:33:24 Filesystem storage - update_metadata : Erreur dans l'extraction des metadonnees (fichier: 79d433ed40812262504c289980960f18) [DEBUG]
+
+
+2023-10-30 15:02:12 ERROR [admin] /openads/app/index.php?module=form&obj=document_numerise_traitement_metadonnees&action=100&idx=0
+2023-10-30 15:02:12 Filesystem storage - update_metadata : Erreur dans l'extraction des metadonnees (fichier: 79d433ed40812262504c289980960f18) [DEBUG]
+

@@ -1,0 +1,77 @@
+.mainrubrik-export--import:not(.mainrubrik-),
+.mainrubrik-export:not(.mainrubrik-),
+.mainrubrik-import:not(.mainrubrik-) {
+
+    #form-export-sitadel {
+        display: flex;
+        gap: 5vw;
+        > div.field {
+            grid-template-columns: 1fr;
+            //width: 100%;
+        }
+    }
+    .pageDescription,
+    [id^="reqmo"]{
+        position: relative;
+        background-color: $blanc;
+        padding: 1em;
+
+        &:before {
+            content: '';
+            box-shadow: 0 2px 6px 0 rgba($noir, .15);
+            z-index: -1;
+            position: absolute;
+            top:0;
+            left:0;
+            right:0;
+            bottom:0;
+            border-radius: inherit;
+        }
+    }
+    .pageDescription {
+        border-radius: 5px 5px 0 0;
+        margin-bottom: 0;
+
+    }
+    [id^="reqmo"] {
+        border-radius: 0 0 5px 5px;
+    }
+
+
+    // Versement aux archives
+
+    form[action="versement_archives.php"] {
+        background-color: $blanc;
+        box-shadow: 0 2px 6px 0 rgba($noir, .15);
+        padding: 1em 1em 0 1em;
+        border-radius: 0 0 5px 5px;
+        .formEntete #form-content{
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+        }
+        .field {
+            align-items: center;
+        }
+        .form-content {
+            border: 0;
+        }
+    }
+
+    // Statistiques à la demande
+
+    #reqmo_pilot .list, #reqmo-list fieldset{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1em;
+        .choice a{
+            @include buttonPrimary;
+            width: 100%;
+        }
+    }
+    #generator-generate {
+        form table{
+            width: 100%;
+        }
+    }
+}

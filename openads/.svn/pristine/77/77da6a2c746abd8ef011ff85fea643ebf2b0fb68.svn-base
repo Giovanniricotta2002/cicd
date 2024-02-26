@@ -1,0 +1,44 @@
+[om-tests]
+database_name=openads
+instance_name=openads
+delete_folders=
+#
+    var/filestorage_test
+copy_files=
+#
+    tests/binary_files/tests_services/referentiel_erp_test.php tests_services/
+    tests/binary_files/tests_services/trouillotage_service_test.php tests_services/
+    tests/binary_files/tests_services/rest_entry.php tests_services/
+    tests/binary_files/tests_services/REST/demande_api.php tests_services/REST/
+    tests/binary_files/tests_services/metier/demandemanager.php tests_services/metier/
+    tests/binary_files/tests_services/REST/task_api.php tests_services/REST/
+    tests/binary_files/tests_services/metier/taskaddmanager.php tests_services/metier/
+#
+    tests/binary_files/filestorage/* var/filestorage/
+    tests/binary_files/dyn/* dyn/
+    tests/binary_files/htaccess_deny_from_all var/.htaccess
+create_folders=
+    tests_services/
+    tests_services/REST/
+    tests_services/metier/
+    var/
+    var/filestorage/
+    var/digitalization/
+    var/digitalization/Todo/
+    var/digitalization/Done/
+    var/tmp/
+    var/log/
+chmod_777=
+# apache doit pouvoir écrire dans les répertoires de storage et de log
+    var/
+# apache doit pouvoir écrire dans les répertoires destinés à recevoir
+# des fichiers générés
+    gen/obj/
+    gen/sql/pgsql/
+    core/obj/
+    core/sql/pgsql/
+    obj/
+    sql/pgsql/
+    tests/resources/app/gen
+# Les fichiers de configuration doivent être modifiables
+    dyn/

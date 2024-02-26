@@ -1,0 +1,326 @@
+table.tab-tab {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 0.8rem;
+    font-feature-settings: "tnum";
+    overflow-x: auto;
+    background-color: $blanc;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, .25);
+
+    thead {
+        border-bottom: 2px solid grey;
+
+        th {
+            vertical-align: middle;
+
+            text-align: left;
+
+            >span {
+                padding: 0.5em;
+            }
+
+            +th:not(.actions-max-1)>span {
+                border-left: 1px solid #eee;
+            }
+        }
+
+        th span:not(.ui-icon-search) {
+            display: inline-block;
+        }
+    }
+
+    tbody {
+        tr {
+            background-color: transparent;
+
+            +tr {
+                border-top: 1px solid #ddd;
+            }
+
+            &.even { 
+                background:#f8f8f8; 
+            }
+            
+            &:hover {
+                background: $brand300;
+            }
+        }
+
+        &:empty,
+        &:-moz-only-whitespace {
+            position: relative;
+            height: 3em;
+
+            &::after {
+                position: absolute;
+                display: flex;
+                width: 100%;
+                height: 100%;
+                justify-content: center;
+                align-items: center;
+                content: "Aucun enregistrement.";
+            }
+        }
+    }
+
+    tr.tab-data td,
+    th {
+        padding: 5px;
+    }
+
+    .icons {
+        span+span {
+            padding-left: 5px;
+        }
+    }
+
+    [class*="actions"] {
+        white-space: nowrap;
+        a + a {
+            margin-left: .5em;
+        } 
+    }
+
+    [class*="actions"] {
+        a {
+            width: 30px;
+            height: 30px;
+        }
+        a span:before{
+            font-size:1.5rem;
+        }
+        .add-16 {
+            @include newIcon("\EA0E");
+            color: $brandDark;
+            &:hover {
+                color: darken($brandDark, 10%);
+            }
+        }
+        .omi-add-multiple-box-fill {
+            color: $brandDark;
+            &:hover {
+                color: darken($brandDark, 10%);
+            }
+        }
+        .ri-add-box-fill.ajout-tiers {
+            color: #31c29e;
+            &:hover {
+                color: darken(#31c29e, 10%);
+            }
+        }
+        
+        
+    }
+}
+
+/* TABLE */
+div.tab-pagination {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
+    border: 1px solid $gris10;
+    border-radius: 5em;
+    padding: .15em 1.5em;
+
+    >div[class*="pagination-"] {
+        padding: 0 .5em;
+    }
+
+    .pagination-text {
+        line-height: 2.5em;
+    }
+
+    .pagination-nb {
+        display: flex;
+        align-items: center;
+        gap: .5em;
+
+        span:before {
+            font-size: 1.2rem;
+
+        }
+    }
+
+    .pagination-select {
+        border-left: 1px solid $gris10;
+
+        form {
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+
+// Table Container 
+
+.tab-listing-container {
+    overflow-x: auto;
+    position: relative;
+    padding: .5em;
+    
+// Barre de défilement
+    &::-webkit-scrollbar {
+    width: .5em;
+    height: .5em;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $gris50;
+        border-radius: .5em;
+        transition: all 0.2s;
+        
+        &:hover{
+            background-color: $gris30;
+        }
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: $brand300;
+    } 
+}
+
+div.tab-edition {
+    float: right;
+    margin: 0 0 0 10px;
+    padding: 3px 0;
+}
+
+div.tab-export {
+    float: right;
+    margin: 0 0 0 10px;
+    padding: 3px 0;
+}
+
+table.tab-tab tr.tab-title th {
+    font-weight: bold;
+}
+
+table.tab-tab tr.tab-title th.title {
+    text-align: left;
+    vertical-align: middle;
+}
+
+table th .ui-icon-search {
+    display: none;
+}
+
+table.tab-tab tr.tab-title th.title span.name a {
+    display: flex;
+}
+
+table.tab-tab tr.tab-title th a,
+table.tab-tab tr.tab-title th a:visited {
+    text-decoration: none;
+}
+
+table.tab-tab tr.tab-title th a:hover {
+    text-decoration: none;
+}
+
+table.tab-tab tr.tab-data  {
+    vertical-align: middle;
+    line-height: 1.8em;
+}
+
+table.tab-tab tr.tab-data.empty td {
+    text-align: center;
+}
+
+table.tab-tab tr.tab-data td.icons {
+    border-left: 0 none;
+    border-right: 0 none;
+    vertical-align: middle;
+    text-align: center;
+}
+
+tr.even td.icons {
+    vertical-align: middle;
+}
+
+td.icon {
+    width: 20px;
+}
+
+td.right {
+    text-align: right !important;
+}
+
+td.left {
+    text-align: left !important;
+}
+
+img.actionicon {
+    vertical-align: text-top;
+}
+
+thead tr th.actions-max-1 {
+    width: 30px;
+}
+
+thead tr th.actions-max-2 {
+    width: 55px;
+}
+
+thead tr th.actions-max-3 {
+    width: 80px;
+}
+
+thead tr th.actions-max-4 {
+    width: 105px;
+}
+
+thead tr th.actions-max-5 {
+    width: 130px;
+}
+
+thead tr th.actions-max-6 {
+    width: 155px;
+}
+
+thead tr th.actions-max-7 {
+    width: 180px;
+}
+
+thead tr th.actions-max-8 {
+    width: 205px;
+}
+
+thead tr th.actions-max-9 {
+    width: 230px;
+}
+
+thead tr th.actions-max-10 {
+    width: 255px;
+}
+
+// Couleur dossier autorisation type détaillé 
+
+p.datd-num {
+    display: inline;
+    border: none;
+    background-color: var(--datd-bg);
+    padding: .25em .5em;
+    border-radius: 2em;
+    white-space: nowrap;
+
+    &::before {
+        display: inline-block;
+        content: "";
+        height: 10px;
+        width: 10px;
+        background-color: var(--datd-color);
+        margin-right: .5em;
+        border-radius: 50%;
+    }
+}
+
+[id^="sousform-dossier_lies"] {
+    margin-top : 3em;
+    
+}
+
+#sousform-lien_dossier_dossier .tab-pagination {
+    margin-bottom: 2px;
+}

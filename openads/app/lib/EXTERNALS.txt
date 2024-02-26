@@ -1,0 +1,9 @@
+#
+# created by: svn propset svn:externals -F ./EXTERNALS.txt .
+#
+
+chosen https://scm.adullact.net/anonscm/svn/openmairie/externals/chosen/tags/1.8.3
+pdfjs-2.10.377 https://scm.adullact.net/anonscm/svn/openmairie/externals/pdf.js/tags/2.10.377
+pdfjs-2.0.943 https://scm.adullact.net/anonscm/svn/openmairie/externals/pdf.js/tags/2.0.943
+gridjs https://scm.adullact.net/anonscm/svn/openmairie/externals/grid.js/tags/4.0.0
+jscolor https://scm.adullact.net/anonscm/svn/openmairie/externals/jscolor

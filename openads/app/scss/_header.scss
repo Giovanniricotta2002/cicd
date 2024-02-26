@@ -1,0 +1,117 @@
+/*
+ * Logo
+ */
+
+
+/* Logo spécifique */
+#jqueryui #logo span.logo_customer {
+    background-image: url("../img/logo_customer.jpg"), url("../img/logo_customer.png");
+    background-repeat: no-repeat;
+    display: block;
+    text-indent: -9999px;
+    margin: 0 0 0 1em;
+    background-size: auto 50px;
+}
+
+#header {
+    background-image: none;
+    background-color: $brandDarker;
+    border-left: 13px solid $brandColor;
+    margin-bottom: 1em ;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-between;
+    align-items: flex-end;
+    color: $blanc;
+    /* Logo */
+    #logo span.logo {
+        width: 135px;
+        height: 50px;
+        background-image: url("../img/logo.png");
+        background-repeat: no-repeat;
+        display: block;
+        text-indent: -9999px;
+        margin-left: 1em;
+    }
+
+    /* Actions personnelles */
+    #actions a, #shortlinks a{
+        color: $blanc;
+        padding: 0 .5em;
+
+        &::before {
+            padding-right: .5em;
+        }
+    }
+
+
+}
+
+// Legacy - app.css
+
+/* #header { clear:both; border-bottom:5px solid #fefefe; height:50px; min-width:780px; padding:5px; font-weight:bold; } */
+#logo {
+    /* float: left; */
+    text-align: left;
+}
+
+#actions {
+    /* float: right; */
+    /* text-align: right; */
+    height: 25px;
+}
+
+#actions img {
+    vertical-align: middle;
+}
+
+#actions ul {
+    list-style: none;
+    display: flex;
+    justify-items: flex-end;
+
+}
+
+#actions ul li {
+    + li a,  &.action-collectivite:not(:empty) {
+        border-left: 2px solid;
+        padding: 0 .5em;
+    }
+    &.action-login {
+        padding: 0 .5em;
+    }
+    
+
+}
+
+#actions ul li.last {
+    border-right: 0 none;
+}
+
+#shortlinks {
+    /* float: right; */
+    /* text-align: right; */
+    /* clear: right; */
+    height: 25px;
+}
+
+#shortlinks img {
+    vertical-align: middle;
+}
+
+#shortlinks ul {
+    list-style: none;
+}
+
+#shortlinks ul li {
+    border-right: 2px solid;
+    /* float: left; */
+    padding: 0 5px;
+}
+
+#shortlinks ul li.last {
+    border-right: 0 none;
+}

@@ -1,0 +1,520 @@
+#content:not(.nomenu) #formulaire {
+    @include noBorderShadow;
+    background: $blanc;
+    border-radius: 5px;
+
+    // Tabs 
+
+    &.ui-tabs {
+        position: relative;
+        padding: .2em;
+        zoom: 1;
+    }
+
+    /* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
+    &.ui-tabs .ui-tabs-nav li a,
+    .ui-tabs.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-selected a {
+        cursor: pointer;
+    }
+
+    //first selector in group seems obsolete, but required to overcome bug in Opera applying cursor: text overall if defined elsewhere...
+    &.ui-tabs .ui-tabs-panel {
+        display: block;
+        border-width: 0;
+        padding: 1em 1.4em 2em;
+        background: none;
+    }
+
+    &.ui-tabs .ui-tabs-hide {
+        display: none !important;
+    }
+
+    ul.ui-tabs-nav {
+        display: flex;
+        gap: .5em;
+        margin: .25em .5em .5em;
+        align-items: stretch;
+        border-bottom: 2px solid $brandDark;
+        flex-wrap: wrap;
+
+        li {
+            display: flex;
+            align-items: center;
+            padding: .5em 1.1em .25em;
+            border: solid 1px $gris10;
+            /* border-bottom: 2px solid transparent; */
+            border-radius: 1em 1em 0 0;
+            transition: all 0.2s ease-in-out;
+            background: lighten($gris10,6%);
+
+            a {
+                display: inline-block;
+                font-weight: 600;
+                padding-top: 4px;
+                padding-bottom: 4px;
+                line-height: 1em;
+                
+            }
+
+            &:not(.ui-state-disabled):hover
+            {
+                border-color: $brandDark;
+                border-bottom-color: transparent ;
+                background-color: $brand200;
+
+                a {
+                    color: $brandDarker;
+                    
+                }
+            }
+
+
+            +li:last-of-type {
+                flex: 1;
+                padding:0;
+                border-color: transparent;
+                background: transparent;
+                &:hover {
+                    border-color: transparent;
+                    background-color: transparent;
+                }
+            }
+        }
+
+        li.ui-state-active.ui-tabs-selected {
+            background: $brandDark;
+            border-color: $brandDark;
+
+            a {
+                color: $blanc;
+                pointer-events: none;
+                cursor: default;
+
+                &:hover {
+                    color: $blanc;
+                }
+            }
+        }
+    }
+
+    //Container
+    .formEntete {
+        border: none;
+        margin-bottom: 1.5em;
+    }
+}
+
+// Inputs
+
+input {
+    border: 1px solid #79838d
+}
+
+.not-null-tag {
+    color: $rouge;
+}
+
+
+// Buttons
+
+
+// Fieldset / Legend
+fieldset.cadre {
+    padding: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border: 1px solid #eee;
+    border-radius: .5em;
+    box-shadow: 0 2px 6px 0 rgba($brandDarker, .15);
+
+    &.collapsed {
+        border: none;
+        box-shadow: none;
+        background-color: transparent;
+        padding: 0;
+        margin: 0;
+    }
+    legend.collapsible {
+        cursor: pointer;
+    }
+
+    legend.ui-widget-content {
+        color: #2b4550;
+        font-size: 1.25em;
+        font-weight: 700;
+        padding: .25em 1em;
+        border-radius: 2em;
+        border: solid 1px #eee;
+
+        &:before {
+            font-size: 1.25em;
+            vertical-align: middle;
+            padding-right: 0.5em;
+        }
+    }
+    /* &#fieldset-form-dossier_instruction-instruction {
+        box-shadow: unset;
+        > legend {
+            border: none;
+        }
+    } */
+}
+
+
+/* ADVANCED SEARCH */
+#advanced-form {
+    margin-bottom: 15px;
+}
+
+/* #adv-search-adv-fields .field {float:left;width: auto;} */
+#adv-search-adv-fields .formEntete {
+    background-color: transparent;
+}
+
+.raz_advs {
+    margin: 5px;
+    padding: 5px 0 5px 0;
+}
+
+.tab-search form {
+    display: inline-flex;
+    gap: .25em;
+    align-items: start;
+
+    button#search-submit span.ui-button-text {
+        display: inline;
+    }
+}
+
+
+
+// Forms and inputs
+[id*="form-container"] .formEntete #form-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+
+// Fieldset content 
+
+.fieldsetContent,
+.bloc {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+// Empty fields
+
+/* .field_value:empty,
+.field_value:-moz-only-whitespace,
+.form-content:empty,
+.form-content:-moz-only-whitespace {
+    &:after {
+        display: block;
+        content: "Non renseigné";
+        font-weight: 300;
+        color: $gris30;
+        font-size: 1em;
+    }
+} */
+
+
+
+
+
+// Fields 
+
+.field:not([class$="field-type-hidden"]):not([class$="field-type-hiddendate"]):not(.field-type-previsualiser_pdf):not([class*="field-type-html"]) {
+    align-items: baseline;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    margin-bottom: .25em;
+    /* grid-template-columns: minmax(20%, auto) 1fr; */
+    gap: 1em;
+
+    &.field-type-textarea {
+        align-items: center;
+            min-width: 300px;
+
+        .form-content {
+            border: 1px solid #eee;
+            border-radius: .5em;
+            padding: 1em;
+            font-weight: normal;
+            font-family: monospace;
+        }
+    }
+
+    &.field-type-textarea .form-content {
+        border: none;
+        padding: 0;
+    }
+    &.field-type-checkbox {
+        grid-template-columns: max-content min-content;
+    }
+}
+
+
+.field[class$="static"] .form-content,
+.field[class$="statiq"] .form-content {
+    border-bottom: 1px solid #eee;
+}
+
+.field.field-type-htmlstatic {
+    max-width: 100%;
+
+    p {
+        word-break: break-word;
+    }
+}
+
+.field.field-type-mail {
+    .form-content {
+        display: flex;
+        gap: 1em
+    }
+}
+
+.field.field-type-autocomplete {
+    .autocomplete-container {
+        display: grid;
+        grid-template-columns: 1fr 20px;
+        align-items: center;
+        grid-gap: 0.5em;
+    }
+}
+
+.ui-icon[title="Cliquer ici pour envoyer un mail à cette adresse"] {
+
+    @include buttonSecondary;
+    display: inline-flex;
+    align-self: baseline;
+    font-size: 0;
+
+    &:before {
+        font-size: 1rem;
+    }
+
+    &::after {
+        display: ruby;
+        font-size: .8rem;
+        content: "Envoyer un email";
+    }
+}
+
+.field.field.field-type-upload2 .form-content {
+    display: flex;
+    gap: 5px;
+
+    a {
+        padding: .5em;
+        border-radius: .5em;
+        border: 1px solid $brandDark;
+        color: $brandDark;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2em;
+
+        &:hover {
+            background-color: $brandDark;
+            color: $blanc;
+        }
+
+        &:last-of-type {
+            color: $rouge;
+            border-color: $rouge;
+
+            &:hover {
+                background-color: $rouge;
+                color: $blanc;
+            }
+        }
+    }
+}
+
+.field.field-type-file {
+    .form-content {
+        border-bottom: 1px solid #eee
+    }
+    span.om-prev-icon {
+        margin-left: .5em;
+        margin-bottom: 0;
+    }
+    [title="Ouvrir le fichier"] {
+        @include buttonPrimary;
+        &.om-prev-icon {
+            margin-left: 2em;
+        }
+        a {
+            color: inherit
+        }
+    }
+
+    [title="Enregistrer le fichier"] {
+        @include buttonSecondary;
+
+        a {
+            color: inherit
+        }
+    }
+}
+
+.form-libelle {
+    padding: 0;
+}
+
+.form-content {
+    font-weight: 700;
+    min-height: 1em;
+    padding: 0;
+
+    >input:not([type="checkbox"]):not([type="radio"]),
+    select,
+    textarea {
+        width: 100%;
+        &#indicatif {
+            max-width: 8ch
+        }
+        &[id*="telephone"], &#fax {
+            width: 22ch
+        }
+
+    }
+}
+
+#morelineReferenceCadastrale {
+    .form-libelle {border: 0;}
+}
+
+
+.bloc.evmt_suivant_tacite_di {
+    .form-content {
+        display: inline-block;
+    }
+
+    #infobulle-suivant-tacite {
+        display: inline-block;
+    }
+}
+
+textarea.field-type-textarea {
+    font-family: 'ibm-plex-mono', monospace;
+    min-height: 10em;
+}
+
+[class$="field-type-hidden"],
+[class$="field-type-hiddendate"],
+.display-none {
+    display: none;
+}
+
+
+input.champFormulaire,
+select {
+    width: 100%;
+    font-size: 1em;
+    padding: 0.5em;
+    font-family: 'Inter', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    border: 1px solid #d3d3d3;
+    background: $blanc;
+    border-radius: .25em;
+}
+input[type="checkbox"],
+input[type="radio"] {
+    width: auto;
+}
+
+.chosen-container {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    margin-right: 1em;
+
+    .chosen-single {
+        min-width: 300px;
+    }
+    .info-16 {
+        position: absolute;
+        left: 100%;
+        top: 5px;
+        margin-left: .5em;
+    }
+}
+
+.field[class*="field-type-date"],
+[class*="field-type-date"]{
+    .form-content {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        > input:not([type="checkbox"]):not([type="radio"]) {
+            max-width: 11ch;
+            min-width: 9ch;
+        }
+    }
+}
+
+#ui-datepicker-div {
+
+    td a.ui-state-default {
+        border-radius: 1em;
+        text-align: center;
+        width: 2em;
+        height: 2em;
+        line-height: 1.5em;
+
+        &:hover {
+            color: $brandDark;
+            font-weight: 700;
+        }
+    }
+
+    td a.ui-state-default.ui-state-active {
+        background-color: $brandDark;
+        font-weight: 700;
+        color: $blanc;
+
+        &:hover {
+            color: $blanc;
+        }
+    }
+
+    .ui-state-highlight {
+        font-weight: 700;
+        background-color: $brandColor;
+    }
+
+}
+
+// buttons
+button {
+    border: none;
+    font-weight: 600;
+
+    &:not(.ui-datepicker-trigger) {
+        /* color: $blanc; */
+        border-radius: 0.2em;
+    }
+
+}
+
+.formControls {
+    display: flex;
+    align-items: center;
+    gap: .5em;
+    //margin: 1em auto;
+}
+
+
+form:not[id] .form-content,
+form[name="f1"] .form-content {
+    border: none;
+}
+
+
+form[name="f1"] .form-libelle {
+    border-bottom: 1px solid $gris10;
+}

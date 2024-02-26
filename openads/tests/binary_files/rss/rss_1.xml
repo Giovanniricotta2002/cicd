@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+  <channel>
+    <title>RSS_1 5 Items</title>
+    <link>https://www.atreal.fr/le-lab/le-lab</link>
+    <description></description>
+        <item>
+            <title>item_1 du flux rss_1</title>
+            <link>https://www.atreal.fr/le-lab/urbanisme-4-5_4-6</link>
+            <description>Description de l'item 1 du flux rss_1</description>
+        </item>
+        <item>
+            <title>item_2 du flux rss_1</title>
+            <link>https://www.atreal.fr/le-lab/urbanisme-4-5_4-6</link>
+            <description>Description de l'item 2 du flux rss_1</description>
+        </item>
+        <item>
+            <title>item_3 du flux rss_1</title>
+            <link>https://www.atreal.fr/le-lab/urbanisme-4-5_4-6</link>
+            <description>Description de l'item 3 du flux rss_1</description>
+        </item>
+        <item>
+            <title>item_4 du flux rss_1</title>
+            <link>https://www.atreal.fr/le-lab/urbanisme-4-5_4-6</link>
+            <description>Description de l'item 4 du flux rss_1</description>
+        </item>
+        <item>
+            <title>item_5 du flux rss_1</title>
+            <link>https://www.atreal.fr/le-lab/urbanisme-4-5_4-6</link>
+            <description>Description de l'item 5 du flux rss_1</description>
+        </item>
+    </channel>
+  </rss>

@@ -1,0 +1,2 @@
+habilitation_tiers_consulte;type_habilitation_tiers_consulte;texte_agrement;division_territoriales;om_validite_debut;om_validite_fin;tiers_consulte
+1;id_type_hab_tc;texte agrement_hab_tc_csv;div terr;2022-01-01;2099-01-01;id_tc;

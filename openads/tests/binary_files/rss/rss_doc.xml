@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+  <channel>
+    <title>Actualités</title>
+    <link>http://www.openmairie.org/framework</link>
+    <description></description>
+        <item>
+            <title>Nouvelle version d'openADS</title>
+            <link>http://www.openmairie.org/framework</link>
+            <description> Découvrez les nouveautés de l'application openADS</description>
+        </item>
+        <item>
+            <title>Nouvelle version d'openMairie</title>
+            <link>http://www.openmairie.org/framework</link>
+            <description>Découvrez les nouveautés du Framework openMairie</description>
+        </item>
+    </channel>
+  </rss>

@@ -1,0 +1,71 @@
+section.workflow-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap:2.5em ;
+
+    h1 {
+        grid-column: 1 /-1;
+        margin-bottom: -.75em;
+        /* margin-bottom: 1em; */
+    }
+    article.workflow-card {
+        @include noBorderShadow(1px, 2px);
+        border: solid 1px $gris10;
+        border-radius: 1em;
+        padding: .5em 1em;
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: .5em 0 1em;
+            h2.label {
+                text-transform: uppercase;
+                padding: .5em 1em;
+                font-size: .9em;
+                white-space: normal; 
+                max-width: calc(100% - 120px);
+                line-height: unset;
+                hyphens: auto;
+            }
+            a {
+                @include buttonSecondary;
+                margin: 0;
+                font-size: .75em;
+                
+            }
+        }
+        h3 {
+            margin-bottom: .5em;
+            font-weight: 400;
+            color: $gris30;
+            font-size: 14px;
+        }
+
+        li {
+            list-style: none;
+            padding: 1em ;
+            +li {
+                border-top: solid 1px $gris10;
+            }
+        }
+
+        .wf_evenement_action {
+            &.cursor-help {
+                cursor: help;
+            } 
+            a {
+                font-weight: 600;
+                &:hover {
+                    color: $brandDark
+                }
+            }
+        }
+        .workflow-card-event {
+            font-weight: 600;
+            &:hover {
+                color: $brandDark;
+            }
+        }
+    }
+}

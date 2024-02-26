@@ -1,0 +1,24 @@
+
+
+{
+    "pec_metier": {
+        "date_pec_metier": "2023-03-01",
+        "date_reception": "2023-03-01",
+        "date_limite_prescrire": "",
+        "date_limite_reponse": "2023-05-01",
+        "service_consulte": "UUU-VVV-WWW",
+        "statut_pec_metier": "2",
+        "texte_observations": "il manque des pieces... Mais c'est pas pareil",
+        "types_pieces_manquantes": 
+        [
+            "XXX",
+            "YYY"
+        ]
+    },
+    "external_uids": {
+        "dossier": "RRR-SSS-TTT",
+        "consultation": "AAA-BBB-CCC",
+        "pec_metier": "OOO-PPP-QQQ"
+    }
+}
+

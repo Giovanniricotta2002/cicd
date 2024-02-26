@@ -1,0 +1,69 @@
+{
+    "demande":
+    {
+        "dossier_initial": "XXX",
+        "type_demande": "dpc"
+    },
+    "demandeur":
+    [
+        {
+            "bp": "999",
+            "cedex": "01",
+            "code_postal": "75001",
+            "courriel": "katyperry@free.fr",
+            "lieu_dit": "Rolland",
+            "localite": "Paris",
+            "notification": "t",
+            "particulier_civilite": "3",
+            "particulier_commune_naissance": "Montreuil",
+            "particulier_date_naissance": "1980-07-09",
+            "particulier_departement_naissance": "093",
+            "particulier_nom": "Perry",
+            "particulier_pays_naissance": "France",
+            "particulier_prenom": "Katy",
+            "pays": "France",
+            "petitionnaire_principal": "t",
+            "qualite": "particulier",
+            "telephone_fixe": "0876543266",
+            "type_demandeur": "petitionnaire",
+            "voie": "rue de l'église"
+        },
+        {
+          "bp": "",
+          "cedex": "",
+          "code_postal": "83300",
+          "lieu_dit": "",
+          "localite": "DRAGUIGNAN",
+          "notification": "f",
+          "particulier_civilite": "4",
+          "particulier_nom": "LAGRANGE",
+          "particulier_prenom": "Marcel",
+          "pays": "France",
+          "petitionnaire_principal": "f",
+          "qualite": "particulier",
+          "type_demandeur": "delegataire",
+          "voie": "rue des lieutemants Thomazo"
+        }
+    ],
+    "donnees_techniques":
+    {
+        "enga_decla_date": "2022-01-17",
+        "enga_decla_lieu": "Marseille"
+    },
+    "dossier":
+    {
+        "depot_electronique": "t",
+        "insee": "13055",
+        "terrain_adresse_code_postal": "75001",
+        "terrain_adresse_lieu_dit": "",
+        "terrain_adresse_localite": "Paris",
+        "terrain_adresse_voie": "rue de l'espoir",
+        "terrain_adresse_voie_numero": "69",
+        "terrain_references_cadastrales": "666AA9999;",
+        "terrain_superficie": "10005.0"
+    },
+    "external_uids":
+    {
+        "demande": "pieces_complementaires/44"
+    }
+}

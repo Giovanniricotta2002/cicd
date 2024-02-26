@@ -1,0 +1,212 @@
+/* .info-16,
+.check-16 {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+} */
+
+/* .check-16 {
+    background-image:url("../img/check-16x16.png");
+} */
+
+/* .info-16 {
+    background-image:url("../img/info-16x16.png");
+} */
+
+
+/* Icones en 16 pixels */
+/* .arrow-right-16 { background-image:url("../img/arrow-right-16x16.png"); } */
+/* .add-16 { background-image: url("../img/add-16x16.png"); } */
+/* .delete-16 { background-image: url("../img/delete-16x16.png"); } */
+/* .edit-16 { background-image: url("../img/edit-16x16.png"); } */
+/* .copy-16 { background-image: url("../img/copy-16x16.png"); } */
+/* .pdf-16 { background-image: url("../img/pdf-16x16.png"); } */
+
+/* .lu-16, .finalise, .marque-16 {
+    background-image: url("../img/lu-16x16.png");
+} */
+
+/* .toutes-les-pieces-16 {
+    background-image: url("../img/folder-16x16.png");
+} */
+/* .transferer-16 {
+    background-image: url("../img/tb_fleche.png");} */
+
+/* .rediger-16 {
+    background-image: url("../img/rediger-16x16.png");
+} */
+/* .search-frequent-16, .loupe-16 {
+    background-image: url("../img/search-16x16.png");
+} */
+
+/* .mut-add-16 { 
+    background-image: url("../img/mut-add-16x16.png"); 
+} */
+/* .add-16-blue { 
+    background-image: url("../img/add-16x16-blue.png"); 
+} */
+
+/* .journal-instruction-16 {
+  background-image: url("../img/journal-instruction-16x16.png");
+  background-size: 15px;
+} */
+/* .envoi_lettre_rar-16,
+.bordereaux-16,
+.bordereau_envoi_maire-16 {
+    background-image: url("../img/pdf-16x16.png");
+} */
+
+/* .definalise, .demarque-16, .nonlu-16 {
+    background-image: url("../img/delete-16x16.png");
+} */
+/* .affichage_reglementaire_attestation-16,
+.affichage_reglementaire_registre-16 {
+    background-image: url("../img/pdf-16x16.png");
+} */
+
+/* actions d'envoi de mail */
+/*  .notifier_commune-16 {
+    background-image: url("../img/send-mail-16x16.png");
+  } */
+/* .suivi-dates-16, .suivi_mise_a_jour_des_dates-16, .demandes_avis_mise_a_jour_des_dates-16 { background-image: url("../img/calendar-16x16.png"); } */
+
+
+/* .enjeu_erp-16 {
+    background-image: url("../img/enjeu-erp-16x16.png");
+}
+
+actions d'envoi en signature
+.envoyer_a_signature-16 {
+    background-image: url("../img/send-for-signature-16x16.png");
+}
+
+action d'annulation d'envoi en signature
+.annuler_envoi_signature-16 {
+    background-image: url("../img/send-for-signature-16x16.png");
+}
+
+actions d'envoi au CL
+.envoyer_au_controle_de_legalite-16 {
+    background-image: url("../img/send-to-cl-16x16.png");
+}
+
+.enjeu_urba-16 {
+    background-image: url("../img/enjeu-urba-16x16.png");
+}
+
+.nouveau-dossier-16 {
+    background-image: url("../img/dossier-nouveau-16x16.png");
+}
+
+.dossier-existant-16,
+.dossier_instruction_recherche-16 {
+    background-image: url("../img/dossier-existant-16x16.png");
+}
+
+.autre-dossier-16 {
+    background-image: url("../img/dossier-existant-16x16.png");
+}
+
+.tableau-de-bord-16 {
+    background-image: url("../img/tableau-de-bord-16x16.png");
+}
+
+.consultation-retour-16 {
+    background-image: url("../img/consultation-retour-16x16.png");
+}
+
+.commission-retour-16,
+.commissions-16 {
+    background-image: url("../img/commission-16x16.png");
+}
+
+.commissions-demande-passage-16 {
+    background-image: url("../img/commission-demande-16x16.png");
+}
+
+.dossier_autorisation-16,
+.dossier_instruction_mes_encours-16,
+.dossier_instruction_tous_encours-16,
+.dossier_instruction_mes_clotures-16,
+.dossier_instruction_tous_clotures-16,
+.dossier_contentieux_mes_instructions-16,
+.dossier_contentieux_toutes_instructions-16 {
+    background-image: url("../img/dossier-16x16.png");
+}
+
+.messages_tous_retours-16,
+.messages_retours_ma_division-16,
+.messages_mes_retours-16,
+.messages_contentieux_mes_retours-16,
+.messages_contentieux_retours_ma_division-16,
+.messages_contentieux_tous_retours-16 {
+    background-image: url("../img/message-16x16.png");
+}
+
+.petitionnaire_frequent-16 {
+    background-image: url("../img/petitionnaires-16x16.png");
+}
+
+.depot-electronique-16 {
+    background-image: url("../img/depot_electronique-16x16.png");
+}
+
+
+.message-manuel-16 {
+    background-image: url("../img/message_manuel-16x16.png");
+}
+
+
+.citizen_access_key-16 {
+    background-image: url("../img/citizen_access_key-16x16.png");
+}
+
+.watch-16 {
+    background-image: url("../img/watch-16x16.png");
+}
+
+.unwatch-16 {
+    background-image: url("../img/unwatch-16x16.png");
+}
+
+ */
+/* Lien retour */
+/* a.retour { background: url("../img/back-25x25.png") no-repeat left center transparent; font-weight:bold; margin:5px; padding:5px 0 5px 28px; } */
+
+/* Items */
+
+
+
+
+/* .profil-16 { background-image: url("../img/profil-16x16.png"); }
+.droit-16 { background-image: url("../img/droit-16x16.png"); }
+.utilisateur-16 { background-image: url("../img/utilisateur-16x16.png"); } */
+/* .etat-16 { background-image: url("../img/pdf-16x16.png"); } */
+/* .sousetat-16 { background-image: url("../img/pdf-16x16.png"); } */
+/* .lettretype-16 { background-image: url("../img/pdf-16x16.png"); } */
+/* .collectivite-16 { background-image: url("../img/collectivite-16x16.png"); } */
+/* .reqmo-16 { background-image: url("../img/reqmo-16x16.png"); } */
+/* .radiation-16 { background-image: url("../img/radiation-16x16.png"); } */
+/* .archive-16 { background-image: url("../img/archive-16x16.png"); } */
+/* .search-16 { background-image: url("../img/search-16x16.png"); } */
+/* .modifier-16 { background-image: url("../img/modifier-16x16.png"); }
+.supprimer-16 { background-image: url("../img/supprimer-16x16.png"); }
+.edition-16 { background-image: url("../img/pdf-16x16.png"); }
+ */
+/**/
+
+
+/* Icones en 25 pixels */
+/* .add-25 {
+    background-image: url("../img/add-25x25.png");
+} */
+
+/* .delete-25 {
+    background-image: url("../img/delete-25x25.png");
+} */
+
+/* .pdf-25 {
+    background-image: url("../img/pdf-25x25.png");
+} */

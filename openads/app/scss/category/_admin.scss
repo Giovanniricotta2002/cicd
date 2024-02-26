@@ -1,0 +1,218 @@
+.mainrubrik-administration,
+.mainrubrik-application{
+    // Global
+    .formEntete #form-content{
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    // Collectivité
+
+    /* [id="sousform-om_etat"] {
+
+    } */
+    button.ui-button.localisation {
+        margin: 0
+    }
+    .field-type-rvb .form-content,
+    .field-type-localisation_edition .form-content {
+        display: flex;
+        gap: 1em;
+        align-items: stretch;
+    }
+
+    // Paramètre
+
+    // Communes 
+    
+    // Départements
+
+    // Régions
+
+    // -------------
+    // GESTION DES UTILISATEURS
+    // -------------
+
+    // Profil
+
+    // Droit
+
+    // Utilisateur
+
+    // Annuaire
+
+    // -------------
+    // TABLEAUX DE BORD
+    // -------------
+
+    // Widget
+
+    // Compteur et quota
+
+    // Composition
+    #dashboard-composer {
+        .widget-add-action a {
+            @include buttonPrimary;
+            span {
+                font-size: 1em;
+            }
+        }
+        #widget_add_form {
+            display: flex;
+            gap: .5em;
+            margin-top: 1em;
+            .ui-button {
+                margin: 0;
+            }
+        }
+        .ui-sortable-helper {
+            height: auto !important;
+            width: calc(33% - 1em) !important;
+        }
+    }
+
+    // -------------
+    // OPTIONS AVANCÉES
+    // -------------
+
+    // Sous état
+
+    // Om requête
+
+    // Moniteur Plat'au
+
+    // Import
+    #import-list {
+        fieldset {
+            background: $blanc;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 1em;
+            .choice a{
+                @include buttonPrimary;
+                width: 100%;
+            }
+        }
+    }
+
+    .subtitle, #form-csv-import, #form-csv-import+fieldset {
+        background: $blanc;
+    }
+    .subtitle {
+        margin : 0;
+        border-radius: .5em .5em 0 0 ;
+        padding: .5em ;
+        position:relative;
+        &:before {
+            content: '';
+            box-shadow: 0 2px 6px 0 rgba($noir, .15);
+            z-index: -1;
+            position: absolute;
+            top:0;
+            left:0;
+            right:0;
+            bottom:0;
+            border-radius: inherit;
+        }
+    }
+
+    #form-csv-import {
+        box-shadow: 0 2px 6px 0 rgba($noir, .15);
+        border-radius: 0 0 .5em .5em ;
+        padding: 2em 1em 0;
+    }
+
+    #form-csv-import+fieldset {
+        margin-top: 1em;
+        a.reqmo-16 {
+            @include buttonPrimary
+        }
+    }
+
+    // Import spécifique
+
+    // Générateur
+    #generator {
+        background: $blanc;
+        padding: 1em;
+        border-radius: .5em;
+        box-shadow: 0 2px 6px rgba($noir, .15);
+        
+        fieldset {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1em;
+            &.collapsible .choice:first-of-type {
+                padding: 0;
+                background: $brandColor;
+
+                a {
+                    
+                    color: $blanc;
+                    font-weight: 700;
+                    text-transform: uppercase; 
+                    @include newIcon("\F0EA", bottom);
+                    &:before {
+                        font-size: 1.25em;
+                    }
+                }
+
+                &:hover {
+                    background-color: $brandDark;
+                    a {
+                        color: $blanc;
+                    }
+                }
+            }
+        }
+        legend {
+            text-transform: capitalize;
+        }
+
+        .choice {
+            border: 1px solid $gris10;
+            display: grid;
+            grid-auto-flow: column;
+            grid-template-columns: 1fr 30px 30px;
+            column-gap: .25em;
+            word-break: break-all;
+            padding: .5em;
+            min-height: 50px;
+            place-items: center;
+            border-radius: .5em;
+            box-shadow: 0 1px 3px 0 rgba($noir, .1);
+            transition: all 0.2s;
+            text-transform: capitalize;
+
+            a {
+                padding: .25rem;
+                justify-self: center;
+                color: $blanc;  
+                border-radius: 0.25rem;
+                &:only-of-type {
+                    color: unset;
+                    grid-column: 1/-1;
+                    &:hover {
+                        color: $brandColor;
+                    }
+                } 
+            }
+
+            a.delete-25 {
+                grid-column: 3/4;
+                background-color: $rouge;
+                &:hover {
+                    background: darkred;
+                }
+            }
+            a.generate-25 {
+                grid-column: 2/3;
+                background: $brandColor;
+                &:hover {
+                    background-color: $brandDark;
+                }
+            }
+        }
+    }
+}
