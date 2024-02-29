@@ -22,7 +22,14 @@ on:
         default: dinosaur
         # Input has to be provided for the workflow to run
         required: true
+
+permissions:
+  contents: read
+  actions: read
+  checks: write
+
 jobs:
+
     run_tests:
         runs-on: ubuntu-latest
         steps:
