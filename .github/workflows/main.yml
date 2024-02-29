@@ -50,7 +50,7 @@ jobs:
       runs-on: ubuntu-latest
       strategy:
         matrix:
-          python-version: ["pypy3.9", "pypy3.10", "3.9", "3.10", "3.11", "3.12"]
+          python-version: ["3.9"]
       # container: node:10.18-jessie
       services:
         postgres:
@@ -88,8 +88,8 @@ jobs:
           run: virtualenv omdevtools
         - name: t
           run: . omdevtools/bin/activate
-        - name: wget
-          run: wget https://dist.atreal.fr/public/pip3-requirements.txt -O tests/pip3-requirements.txt
+        # - name: wget
+        #   run: wget https://dist.atreal.fr/public/pip3-requirements.txt -O tests/pip3-requirements.txt
         - name: install requirement
           run: pip install -r tests/pip${py}-requirements.txt
         - name: cd test

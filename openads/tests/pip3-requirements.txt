@@ -1,0 +1,15 @@
+openmairie.devtools==1.0.0
+openmairie.robotframework==4.9.10009
+maildump==1.0
+selenium==2.53.6
+robotframework==3.0.4
+robotframework-seleniumlibrary==3.1.1
+robotframework-selenium2screenshots==0.8.1
+requests==2.22.0
+robotframework-requests==0.5.0
+Pillow==9.1.0
+robotframework-archivelibrary==0.4.0
+psycopg2-binary==2.9.3
+python-daemon==2.2.4
+Unidecode==1.2.0
+
