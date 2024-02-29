@@ -93,7 +93,7 @@ jobs:
         - name: install requirement
           run: |
             ls
-            pip install -r tests/pip3-requirements.txt
+            pip install -r openads/tests/pip3-requirements.txt
         - name: cd test
           working-directory: tests
           run: echo ''
