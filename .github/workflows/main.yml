@@ -99,7 +99,10 @@ jobs:
           working-directory: openads/tests
           run: ls
         - name: g
-          run: xvfb-run -a --server-args=-screen\ 0\ 1680x1050x24 om-tests -c runall
+          run: |
+            ls
+            robot *.robot
+            xvfb-run -a --server-args=-screen\ 0\ 1680x1050x24 om-tests -c runall
           env:
             # The hostname used to communicate with the PostgreSQL service container
             POSTGRES_HOST: postgres
