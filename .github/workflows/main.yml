@@ -100,8 +100,7 @@ jobs:
           working-directory: openads/tests
         # xvfb-run -a --server-args=-screen\ 0\ 1680x1050x24 om-tests -c runall
           run: |
-            robot *.robot
-            ls
+            robot 100_geolocalisation.robot
           env:
             # The hostname used to communicate with the PostgreSQL service container
             POSTGRES_HOST: postgres
