@@ -92,9 +92,7 @@ jobs:
         #   run: wget https://dist.atreal.fr/public/pip3-requirements.txt -O tests/pip3-requirements.txt
         - name: install requirement
           run: |
-            ls
             pip install -r openads/tests/pip3-requirements.txt
-            robot --help
         - name: cd test
           working-directory: openads/tests
           run: ls
