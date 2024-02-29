@@ -94,11 +94,17 @@ jobs:
           run: |
             ls
             pip install -r openads/tests/pip3-requirements.txt
+            robot --help
         - name: cd test
           working-directory: openads/tests
           run: ls
         - name: g
           run: xvfb-run -a --server-args=-screen\ 0\ 1680x1050x24 om-tests -c runall
+          env:
+            # The hostname used to communicate with the PostgreSQL service container
+            POSTGRES_HOST: postgres
+            # The default PostgreSQL port
+            POSTGRES_PORT: 5432
         - name: sleep
           run: sleep 65
 
