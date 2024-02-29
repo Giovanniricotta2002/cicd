@@ -109,6 +109,11 @@ jobs:
             POSTGRES_PORT: 5432
         - name: sleep
           run: sleep 65
+        - name: cat
+          run: |
+            cat /home/runner/work/cicd/cicd/openads/tests/output.xml
+            cat /home/runner/work/cicd/cicd/openads/tests/log.html
+            cat /home/runner/work/cicd/cicd/openads/tests/report.html
 
 
     # run_tests:
