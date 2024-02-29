@@ -86,6 +86,11 @@ jobs:
           run: psql --version
         - name: vir
           run: virtualenv omdevtools
+        - name: Setup firefox
+          id: setup-firefox
+          uses: browser-actions/setup-firefox@v1
+          with:
+            firefox-version: ${{ matrix.firefox }}
         - name: t
           run: . omdevtools/bin/activate
         # - name: wget
@@ -101,6 +106,9 @@ jobs:
         # xvfb-run -a --server-args=-screen\ 0\ 1680x1050x24 om-tests -c runall
           run: |
             robot 100_geolocalisation.robot
+            cat /home/runner/work/cicd/cicd/openads/tests/output.xml
+            cat /home/runner/work/cicd/cicd/openads/tests/log.html
+            cat /home/runner/work/cicd/cicd/openads/tests/report.html
           env:
             # The hostname used to communicate with the PostgreSQL service container
             POSTGRES_HOST: postgres
@@ -108,11 +116,7 @@ jobs:
             POSTGRES_PORT: 5432
         - name: sleep
           run: sleep 65
-        - name: cat
-          run: |
-            cat /home/runner/work/cicd/cicd/openads/tests/output.xml
-            cat /home/runner/work/cicd/cicd/openads/tests/log.html
-            cat /home/runner/work/cicd/cicd/openads/tests/report.html
+        
 
 
     # run_tests:
