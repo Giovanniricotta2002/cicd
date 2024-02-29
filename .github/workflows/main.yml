@@ -91,7 +91,9 @@ jobs:
         # - name: wget
         #   run: wget https://dist.atreal.fr/public/pip3-requirements.txt -O tests/pip3-requirements.txt
         - name: install requirement
-          run: pip install -r tests/pip3-requirements.txt
+          run: |
+            ls
+            pip install -r tests/pip3-requirements.txt
         - name: cd test
           working-directory: tests
           run: echo ''
