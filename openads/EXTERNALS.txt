@@ -1,9 +1,0 @@
-#
-# created by: svn propset svn:externals -F ./EXTERNALS.txt .
-#
-
-# framework openmairie_exemple
-core  https://scm.adullact.net/anonscm/svn/openmairie/openmairie_exemple/tags/4.10.0/core
-lib  https://scm.adullact.net/anonscm/svn/openmairie/openmairie_exemple/tags/4.10.0/lib
-php  https://scm.adullact.net/anonscm/svn/openmairie/openmairie_exemple/tags/4.10.0/php
-

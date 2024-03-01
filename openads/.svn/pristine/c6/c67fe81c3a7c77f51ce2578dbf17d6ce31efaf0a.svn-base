@@ -1,2 +1,0 @@
-lien_habilitation_tiers_consulte_departement;habilitation_tiers_consulte;departement;
-17;id_hab_tc;id_departement;

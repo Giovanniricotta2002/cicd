@@ -1,2 +1,0 @@
-lien_habilitation_tiers_consulte_specialite_tiers_consulte;habilitation_tiers_consulte;specialite_tiers_consulte;
-1;id_hab_tc;id_spe_tc;
