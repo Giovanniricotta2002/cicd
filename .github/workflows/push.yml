@@ -1,0 +1,63 @@
+# run tests manually in the Actions-tab of the project
+name: Oral
+on:
+  workflow_dispatch:
+    # Inputs the workflow accepts.
+    inputs:
+      tag:
+        description: 'Tag for tests to run. Use "*" to run all'
+        default: 1.0.0
+        # Input has to be provided for the workflow to run
+        required: false
+
+permissions:
+  contents: read
+  actions: read
+  checks: write
+jobs:
+    CDelivery:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+
+            - name: qemu
+              uses: docker/setup-qemu-action@v3
+            
+            - name: docker buildx
+              uses: docker/setup-buildx-action@v3
+          
+            - name: login docker
+              uses: docker/login-action@v3
+              with:
+                  username: giovanni2002Ynov
+                  password: dckr_pat_9-DvWS9BHrckFtQ6VaYwE2VX8SU
+                
+            - name: build et push
+              uses: docker/build-push-action@v5
+              with:
+                  context: .
+                  push: true
+                  tags: cicd:no-use
+            - name: capture build artifacts
+              uses: actions/upload-artifact@v3
+              with:
+                  name: Artifacts
+                  path: DockerFile
+            - name: Release
+              id: release
+              run: |
+                  git config --global user.email "github-actions[bot]@users.noreply.github.com"
+                  git config --global user.name "github-actions[bot]"
+                  git tag -a ${{ github.event.inputs.tag }} -m "push cicd"
+                  echo "VERSION=${{ github.event.inputs.tag }}" >> "$GITHUB_OUTPUT"
+          
+            - name: Push Tag
+              run: git push --follow-tags
+            
+            - name: Push Release
+              uses: ncipollo/release-action@v1
+              with:
+                generateReleaseNotes: true
+                artifacts: "*"
+                tag: ${{ steps.release.outputs.VERSION }}
+             
