@@ -86,11 +86,6 @@ jobs:
           run: psql --version
         - name: vir
           run: virtualenv omdevtools
-        - name: Setup firefox
-          id: setup-firefox
-          uses: browser-actions/setup-firefox@v1
-          with:
-            firefox-version: 84.0
         - name: t
           run: . omdevtools/bin/activate
         # - name: wget
