@@ -1,2 +1,0 @@
-tiers_consulte;categorie_tiers_consulte;abrege;libelle;adresse;complement;cp;ville;liste_diffusion;accepte_notification_email;uid_platau_acteur;
-1;id_cat_tc;TNR_070_tc;import_tc;"10 rue des tests d'import de tiers";cplmt_tc;cp_tc;ville_tc;test@070.export\ntest2@070.export;t;TST_UID_PLA

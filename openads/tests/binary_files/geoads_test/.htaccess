@@ -1,4 +1,0 @@
-Allow form All
-AuthType Basic
-AuthUserFile "/var/www/openads/tests/binary_files/geoads_test/.htpasswd"
-require valid-user

@@ -1,8 +1,0 @@
-#
-# created by: svn propset svn:externals -F ./EXTERNALS.txt .
-#
-# @package openfoncier
-# @version SVN : $Id: EXTERNALS.txt 803 2012-11-22 11:12:12Z mlimic $
-#
-
-restler  https://scm.adullact.net/anonscm/svn/openmairie/externals/restler/tags/2.2.0-charset/
