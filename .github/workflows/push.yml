@@ -29,8 +29,7 @@ jobs:
             - name: login docker
               uses: docker/login-action@v3
               with:
-                  registry: ghcr.io
-                  username: giovanni2002Ynov
+                  username: giovanni2002ynov
                   password: dckr_pat_9-DvWS9BHrckFtQ6VaYwE2VX8SU
                 
             - name: build et push
