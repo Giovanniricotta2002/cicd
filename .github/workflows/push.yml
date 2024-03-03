@@ -37,7 +37,7 @@ jobs:
               with:
                   context: .
                   push: true
-                  tags: cicd:no-use
+                  tags: giovanni2002ynov/cicd:no-use
                   labels: cicd
 
             - name: capture build artifacts
