@@ -30,7 +30,7 @@ jobs:
               uses: docker/login-action@v3
               with:
                   username: giovanni2002ynov
-                  password: dckr_pat_9-DvWS9BHrckFtQ6VaYwE2VX8SU
+                  password: dckr_pat_vb6xjjRxmjeLM8xiDzvbZWl-ja8
                 
             - name: build et push
               uses: docker/build-push-action@v5
