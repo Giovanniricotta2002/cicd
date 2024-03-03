@@ -38,12 +38,13 @@ jobs:
                   context: .
                   push: true
                   tags: cicd:no-use
+                  labels: cicd
 
             - name: capture build artifacts
               uses: actions/upload-artifact@v3
               with:
                   name: Artifacts
-                  path: DockerFile
+                  path: Dockerfile
 
             - name: Release
               id: release
