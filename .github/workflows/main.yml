@@ -25,15 +25,14 @@ jobs:
                 command: update
 
             - name: test
-              run: |
-                php -v
-                cd my_app
-                ./vendor/bin/phpunit
+              run: cd my_app
+                # ./vendor/bin/phpunit
+            - name: test2
+              run : vendor/bin/phpunit
 
 
-
-            - name: PhpUnit
-              uses: php-actions/phpunit@v3
-              with:
-                whitelist: my_app/
-                php_version: "8.2"
+            # - name: PhpUnit
+            #   uses: php-actions/phpunit@v3
+            #   with:
+            #     whitelist: my_app/
+            #     php_version: "8.2"
