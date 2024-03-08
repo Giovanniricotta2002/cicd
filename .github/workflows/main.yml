@@ -23,7 +23,9 @@ jobs:
                 working_dir: my_app
               
             - name: PhpUnit
-              run: ls
+              run: |
+                cd my_app
+                ./vendor/bin/phpunit
               # uses: php-actions/phpunit@v3
               # with:
               #   configuration: "phpunit.xml.dist"
