@@ -1,1 +1,24 @@
+# run tests manually in the Actions-tab of the project
+name: php
+on:
+  workflow_dispatch:
 
+permissions:
+  contents: write
+  actions: read
+  checks: write
+jobs:
+    CI:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+            
+            - name: Install Composer
+              uses: php-actions/composer@v6 # or alternative dependency management
+              with:
+                working_dir: my_app
+              
+            - name: PhpUnit
+              uses: php-actions/phpunit@v3
+              with:
+                configuration: "phpunit.xml.dist"
