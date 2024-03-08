@@ -19,8 +19,8 @@ jobs:
             
             - name: Install Composer
               uses: php-actions/composer@v6 # or alternative dependency management
-              # with:
-              #   working_dir: my_app
+              with:
+                working_dir: my_app
               #   php_version: "8.2"
               #   command: update
 
