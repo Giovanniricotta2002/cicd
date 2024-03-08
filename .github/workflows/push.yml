@@ -12,8 +12,9 @@ on:
 
 permissions:
   contents: read
-  actions: read
+  actions: write
   checks: write
+  deployments: write
 jobs:
     CDelivery:
         runs-on: ubuntu-latest
