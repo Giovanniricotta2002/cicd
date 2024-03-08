@@ -57,8 +57,9 @@ jobs:
             - name: Push Tag
               if: github.event.inputs.tag != ''
               run: git push --follow-tags
-            
+              
             - name: Push Release
+              if: github.event.inputs.tag != ''
               uses: ncipollo/release-action@v1
               with:
                 generateReleaseNotes: true
