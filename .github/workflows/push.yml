@@ -32,13 +32,13 @@ jobs:
                   username: giovanni2002ynov
                   password: dckr_pat_jJptlvypHTAwfKu-Pr9O7DBn-Jk
                 
-            - name: build et push
-              uses: docker/build-push-action@v5
-              with:
-                  context: .
-                  push: true
-                  tags: giovanni2002ynov/cicd:no-use
-                  labels: cicd
+            # - name: build et push
+            #   uses: docker/build-push-action@v5
+            #   with:
+            #       context: .
+            #       push: true
+            #       tags: giovanni2002ynov/cicd:no-use
+            #       labels: cicd
 
             - name: capture build artifacts
               uses: actions/upload-artifact@v3
