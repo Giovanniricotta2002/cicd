@@ -61,6 +61,6 @@ jobs:
               uses: ncipollo/release-action@v1
               with:
                 generateReleaseNotes: true
-                artifacts: "*"
+                artifacts: "Dockerfile"
                 tag: ${{ steps.release.outputs.VERSION }}
              
