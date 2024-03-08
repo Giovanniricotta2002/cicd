@@ -16,7 +16,6 @@ permissions:
 jobs:
     CDelivery:
         runs-on: ubuntu-latest
-        if: github.event.inputs.tag == ''
         steps:
             - uses: actions/checkout@v4
 
@@ -36,7 +35,7 @@ jobs:
               uses: docker/build-push-action@v5
               with:
                   context: .
-                  push: true
+                  push: ${{github.event.inputs.tag == ''}}
                   tags: giovanni2002ynov/cicd:no-use
                   labels: cicd
 
@@ -55,6 +54,7 @@ jobs:
                   echo "VERSION=${{ github.event.inputs.tag }}" >> "$GITHUB_OUTPUT"
           
             - name: Push Tag
+              if: github.event.inputs.tag == ''
               run: git push --follow-tags
             
             - name: Push Release
