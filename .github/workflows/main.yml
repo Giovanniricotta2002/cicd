@@ -27,7 +27,7 @@ jobs:
             - name: test
               run: |
                 cd my_app
-                composer install
+                composer update
                 ./vendor/bin/phpunit
             # - name: test2
             #   run : vendor/bin/phpunit
