@@ -26,6 +26,7 @@ jobs:
               
             - name: PhpUnit
               run: |
+                php -v
                 cd my_app
                 ./vendor/bin/phpunit
               # uses: php-actions/phpunit@v3
