@@ -25,10 +25,11 @@ jobs:
                 command: update
 
             - name: test
-              run: cd my_app
-                # ./vendor/bin/phpunit
-            - name: test2
-              run : vendor/bin/phpunit
+              run: |
+                cd my_app
+                vendor/bin/phpunit
+            # - name: test2
+            #   run : vendor/bin/phpunit
 
 
             # - name: PhpUnit
