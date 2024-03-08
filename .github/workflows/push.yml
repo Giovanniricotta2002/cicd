@@ -5,8 +5,7 @@ on:
     # Inputs the workflow accepts.
     inputs:
       tag:
-        description: 'Tag for tests to run. Use "*" to run all'
-        default: 1.0.0
+        description: 'Tag '
         # Input has to be provided for the workflow to run
         required: false
 
@@ -17,6 +16,7 @@ permissions:
 jobs:
     CDelivery:
         runs-on: ubuntu-latest
+        if: github.event.inputs.tag == ''
         steps:
             - uses: actions/checkout@v4
 
@@ -32,13 +32,13 @@ jobs:
                   username: giovanni2002ynov
                   password: dckr_pat_jJptlvypHTAwfKu-Pr9O7DBn-Jk
                 
-            # - name: build et push
-            #   uses: docker/build-push-action@v5
-            #   with:
-            #       context: .
-            #       push: true
-            #       tags: giovanni2002ynov/cicd:no-use
-            #       labels: cicd
+            - name: build et push
+              uses: docker/build-push-action@v5
+              with:
+                  context: .
+                  push: true
+                  tags: giovanni2002ynov/cicd:no-use
+                  labels: cicd
 
             - name: capture build artifacts
               uses: actions/upload-artifact@v3
