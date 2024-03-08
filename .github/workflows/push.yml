@@ -35,7 +35,7 @@ jobs:
               uses: docker/build-push-action@v5
               with:
                   context: .
-                  push: ${{github.event.inputs.tag == ''}}
+                  push: ${{github.event.inputs.tag != ''}}
                   tags: giovanni2002ynov/cicd:no-use
                   labels: cicd
 
@@ -54,7 +54,7 @@ jobs:
                   echo "VERSION=${{ github.event.inputs.tag }}" >> "$GITHUB_OUTPUT"
           
             - name: Push Tag
-              if: github.event.inputs.tag == ''
+              if: github.event.inputs.tag != ''
               run: git push --follow-tags
             
             - name: Push Release
@@ -63,4 +63,3 @@ jobs:
                 generateReleaseNotes: true
                 artifacts: "Dockerfile"
                 tag: ${{ steps.release.outputs.VERSION }}
-             
