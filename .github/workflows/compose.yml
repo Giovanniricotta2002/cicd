@@ -1,7 +1,11 @@
 # run tests manually in the Actions-tab of the project
-name: php
+name: PHP test
 on:
   workflow_dispatch:
+    inputs:
+        DINOSAUR:
+            description: 'test'
+            required: false
 
 permissions:
   contents: write
