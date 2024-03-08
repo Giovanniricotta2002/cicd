@@ -21,6 +21,7 @@ jobs:
               uses: php-actions/composer@v6 # or alternative dependency management
               with:
                 working_dir: my_app
+                php_version: "^8.0"
               
             - name: PhpUnit
               run: |
