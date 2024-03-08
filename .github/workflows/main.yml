@@ -31,5 +31,5 @@ jobs:
               #   ./vendor/bin/phpunit
               uses: php-actions/phpunit@v3
               with:
-                # whitelist: my_app
+                whitelist: my_app/
                 php_version: "8.2"
