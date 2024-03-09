@@ -24,11 +24,11 @@ jobs:
               run: curl https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
             - name: move
               run: |
-                ls
                 cd /var/www/app
-                ls
             - name: compose install
-              run: composer install
+              run: |
+                ls
+                composer install
             - name: php unit
               run: ./vender/bin/phpunit
 
