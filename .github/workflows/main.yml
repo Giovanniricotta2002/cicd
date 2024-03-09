@@ -36,6 +36,7 @@ jobs:
                 composer install
             - name: php unit
               run: |
+                ls
                 cd ../../../
                 ls
                 php phpunit-9.6.phar --version
