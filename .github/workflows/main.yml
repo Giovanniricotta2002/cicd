@@ -20,7 +20,13 @@ jobs:
             - ./:/var/www/app
         steps:
             - uses: actions/checkout@v4
-            - run: ls
+            - name: composer install
+              run: curl https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+            - name: compose install
+              run: composer install
+            - name: php unit
+              run: ./vender/bin/phpunit
+
             
             # - name: Install Composer
             #   uses: php-actions/composer@v6 # or alternative dependency management
