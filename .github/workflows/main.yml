@@ -37,9 +37,7 @@ jobs:
             - name: php unit
               run: |
                 ls
-                cd ../../../
-                ls
-                php phpunit-9.6.phar --version
+                php phpunit-9.6.phar 
 
             
             # - name: Install Composer
