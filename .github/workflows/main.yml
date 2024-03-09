@@ -26,6 +26,7 @@ jobs:
               run: |
                 curl https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
                 curl -LO https://phar.phpunit.de/phpunit-9.6.phar
+                whoami
             - name: move
               run: |
                 cd /var/www/app
@@ -33,9 +34,9 @@ jobs:
               run: |
                 ls
                 composer install
-            - name: php unit
-              run: |
-                php phpunit-9.6.phar --version
+            # - name: php unit
+            #   run: |
+            #     php phpunit-9.6.phar --version
 
             
             # - name: Install Composer
