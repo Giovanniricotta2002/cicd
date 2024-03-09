@@ -35,28 +35,4 @@ jobs:
                 ls
                 composer install
             - name: php unit
-              run: |
-                ls
-                php phpunit-9.6.phar 
-
-            
-            # - name: Install Composer
-            #   uses: php-actions/composer@v6 # or alternative dependency management
-            #   with:
-            #     php_version: "8.2"
-            #     command: update
-
-            # # - name: test
-            # #   run: |
-            # #     cd my_app
-            # #     php bin/console
-            # #     ./vendor/bin/phpunit
-            # - name: test2
-            #   run : ./vendor/bin/phpunit
-
-
-            # - name: PhpUnit
-            #   uses: php-actions/phpunit@v3
-            #   with:
-            #     php_version: "8.2"
-            #     # whitelist: my_app/
+              run: php phpunit-9.6.phar 
