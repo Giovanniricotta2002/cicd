@@ -22,12 +22,12 @@ jobs:
               with:
                 working_dir: my_app
                 php_version: "8.2"
-                command: ls
+                command: update
 
-            # - name: test
-            #   run: |
-            #     cd my_app
-            #     composer update
+            - name: test
+              run: |
+                cd my_app
+                php bin/console
             #     ./vendor/bin/phpunit
             # - name: test2
             #   run : vendor/bin/phpunit
