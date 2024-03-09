@@ -25,7 +25,7 @@ jobs:
             - name: install composer and phpunit
               run: |
                 curl https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
-                curl -LO https://phar.phpunit.de/phpunit-9.6.phar | php -- --install-dir=/usr/local/bin --filename=phpunit
+                curl -LO https://phar.phpunit.de/phpunit-9.6.phar
             - name: move
               run: |
                 cd /var/www/app
@@ -35,7 +35,7 @@ jobs:
                 composer install
             - name: php unit
               run: |
-                php phpunit --version
+                php phpunit-9.6.phar --version
 
             
             # - name: Install Composer
