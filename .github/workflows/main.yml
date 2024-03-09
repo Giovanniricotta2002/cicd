@@ -22,10 +22,10 @@ jobs:
             - uses: actions/checkout@v4
             - name: composer install
               run: curl https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
-            - name: compose install
-              run: composer install
             - name: move
               run: cd /var/www/app
+            - name: compose install
+              run: composer install
             - name: php unit
               run: ./vender/bin/phpunit
 
