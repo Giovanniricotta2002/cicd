@@ -37,6 +37,7 @@ jobs:
             - name: php unit
               run: |
                 cd ../../../
+                ls
                 php phpunit-9.6.phar --version
 
             
