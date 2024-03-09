@@ -21,14 +21,14 @@ jobs:
               uses: php-actions/composer@v6 # or alternative dependency management
               with:
                 working_dir: my_app
-              #   php_version: "8.2"
-              #   command: update
+                php_version: "8.2"
+                command: vendor/bin/phpunit
 
-            - name: test
-              run: |
-                cd my_app
-                composer update
-                ./vendor/bin/phpunit
+            # - name: test
+            #   run: |
+            #     cd my_app
+            #     composer update
+            #     ./vendor/bin/phpunit
             # - name: test2
             #   run : vendor/bin/phpunit
 
