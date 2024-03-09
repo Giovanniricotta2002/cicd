@@ -33,7 +33,7 @@ jobs:
                 composer install
             - name: php unit
               run: |
-                ls
+                ls vendor/bin
                 ./vender/bin/phpunit
 
             
