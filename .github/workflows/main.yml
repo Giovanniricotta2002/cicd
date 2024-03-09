@@ -32,7 +32,9 @@ jobs:
                 ls
                 composer install
             - name: php unit
-              run: ./vender/bin/phpunit
+              run: |
+                ls
+                ./vender/bin/phpunit
 
             
             # - name: Install Composer
