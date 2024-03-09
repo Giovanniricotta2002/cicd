@@ -20,21 +20,20 @@ jobs:
             - name: Install Composer
               uses: php-actions/composer@v6 # or alternative dependency management
               with:
-                working_dir: my_app
                 php_version: "8.2"
                 command: update
 
-            - name: test
-              run: |
-                cd my_app
-                php bin/console
+            # - name: test
+            #   run: |
+            #     cd my_app
+            #     php bin/console
             #     ./vendor/bin/phpunit
             # - name: test2
             #   run : vendor/bin/phpunit
 
 
-            # - name: PhpUnit
-            #   uses: php-actions/phpunit@v3
-            #   with:
-            #     whitelist: my_app/
-            #     php_version: "8.2"
+            - name: PhpUnit
+              uses: php-actions/phpunit@v3
+              with:
+                php_version: "8.2"
+                # whitelist: my_app/
