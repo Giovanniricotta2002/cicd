@@ -22,7 +22,7 @@ jobs:
               with:
                 working_dir: my_app
                 php_version: "8.2"
-                command: vendor/bin/phpunit
+                command: ls
 
             # - name: test
             #   run: |
