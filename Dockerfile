@@ -18,7 +18,7 @@ RUN apt-get -qq update && \
 WORKDIR /var/www/app
 
 
-COPY ./my_app /var/www/app/
+COPY ./ /var/www/app/
 
 ENV LANG=fr_FR.UTF-8
 ENV LANGUAGE=fr_FR.UTF-8

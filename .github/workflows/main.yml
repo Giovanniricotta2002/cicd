@@ -14,26 +14,31 @@ permissions:
 jobs:
     CI:
         runs-on: ubuntu-latest
+        container:
+          image: php:8.2-cli
+          volumes:
+            - ./:/var/www/app
         steps:
             - uses: actions/checkout@v4
+            - run: ls
             
-            - name: Install Composer
-              uses: php-actions/composer@v6 # or alternative dependency management
-              with:
-                php_version: "8.2"
-                command: update
+            # - name: Install Composer
+            #   uses: php-actions/composer@v6 # or alternative dependency management
+            #   with:
+            #     php_version: "8.2"
+            #     command: update
 
-            # - name: test
-            #   run: |
-            #     cd my_app
-            #     php bin/console
-            #     ./vendor/bin/phpunit
-            - name: test2
-              run : ./vendor/bin/phpunit
+            # # - name: test
+            # #   run: |
+            # #     cd my_app
+            # #     php bin/console
+            # #     ./vendor/bin/phpunit
+            # - name: test2
+            #   run : ./vendor/bin/phpunit
 
 
-            - name: PhpUnit
-              uses: php-actions/phpunit@v3
-              with:
-                php_version: "8.2"
-                # whitelist: my_app/
+            # - name: PhpUnit
+            #   uses: php-actions/phpunit@v3
+            #   with:
+            #     php_version: "8.2"
+            #     # whitelist: my_app/
