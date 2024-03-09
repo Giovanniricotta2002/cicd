@@ -20,6 +20,8 @@ jobs:
             - ./:/var/www/app
         steps:
             - uses: actions/checkout@v4
+            - name: apt install
+              run: apt-get -qq update && apt-get -qq install libpq-dev unzip libgd-dev libicu-dev curl locales -y
             - name: composer install
               run: curl https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
             - name: move
