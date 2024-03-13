@@ -12,17 +12,17 @@ class Math
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
-    private ?int $id = null;
+    private ?int $id;
 
-    #[ORM\Column]
+    #[ORM\Column(nullable: true)]
     #[Assert\NotBlank(message: 'Vous devez saisir un nombre A.')]
     #[Assert\Type('integer')]
-    private ?int $numberA = null;
+    private ?int $numberA;
 
-    #[ORM\Column]
+    #[ORM\Column(nullable: true)]
     #[Assert\NotBlank(message: 'Vous devez saisir un nombre B.')]
     #[Assert\Type('integer')]
-    private ?int $numberB = null;
+    private ?int $numberB;
 
     public function getId(): ?int
     {

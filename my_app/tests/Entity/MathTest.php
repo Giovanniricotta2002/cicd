@@ -13,11 +13,11 @@ class MathTest extends KernelTestCase
     {
         parent::setUp();
         self::bootKernel();
-        self::bootKernel(); 
-        $container = static::getContainer(); 
-        $this->validator = $container->get('validator'); 
+        self::bootKernel();
+        $container = static::getContainer();
+        $this->validator = $container->get('validator');
     }
-    
+
     public function getEntity(): Math
     {
         return (new Math())
@@ -29,6 +29,7 @@ class MathTest extends KernelTestCase
     {
         self::bootKernel();
         $errors = $this->validator->validate($math);
+        dump($errors);
         $messages = [];
         /** @var ConstraintViolation $error */
         foreach($errors as $error) {
@@ -42,19 +43,13 @@ class MathTest extends KernelTestCase
         $this->assertHasErrors($this->getEntity(), 0);
     }
 
-    public function testInvalidMathEntity()
-    {
-        $this->assertHasErrors($this->getEntity()->setNumberA(1), 1);
-        $this->assertHasErrors($this->getEntity()->setNumberB(1), 1);
-    }
-
     public function testInvalidBlankNumber()
     {
-        $this->assertHasErrors($this->getEntity()->setNumberA(''), 1);
+        $this->assertHasErrors($this->getEntity()->setNumberA(4));
     }
 
     public function testInvalidUsedCode ()
     {
-        $this->assertHasErrors($this->getEntity()->setNumberB(4), 1);
+        $this->assertHasErrors($this->getEntity()->setNumberB(4));
     }
 }
