@@ -14,54 +14,57 @@ permissions:
   actions: read
   checks: write
 jobs:
-    CDelivery:
-        runs-on: ubuntu-latest
-        steps:
-            - uses: actions/checkout@v4
+  CDelivery:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
 
-            - name: qemu
-              uses: docker/setup-qemu-action@v3
-            
-            - name: docker buildx
-              uses: docker/setup-buildx-action@v3
-          
-            - name: login docker
-              uses: docker/login-action@v3
-              with:
-                  username: giovanni2002ynov
-                  password: dckr_pat_jJptlvypHTAwfKu-Pr9O7DBn-Jk
+      - name: qemu
+        uses: docker/setup-qemu-action@v3
+      
+      - name: docker buildx
+        uses: docker/setup-buildx-action@v3
+      
+      - name: login docker
+        uses: docker/login-action@v3
+        with:
+          username: giovanni2002ynov
+          password: dckr_pat_jJptlvypHTAwfKu-Pr9O7DBn-Jk
                 
-            - name: build et push
-              uses: docker/build-push-action@v5
-              with:
-                  context: .
-                  push: ${{github.event.inputs.tag != ''}}
-                  tags: giovanni2002ynov/cicd:no-use
-                  labels: cicd
+      - name: build et push
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: ${{github.event.inputs.tag != ''}}
+          tags: giovanni2002ynov/cicd:no-use
+          labels: cicd
 
-            - name: capture build artifacts
-              uses: actions/upload-artifact@v3
-              with:
-                  name: Artifacts
-                  path: Dockerfile
+      - name: capture build artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: Artifacts
+          path: Dockerfile
 
-            - name: Release
-              if: github.event.inputs.tag != ''
-              id: release
-              run: |
-                  git config --global user.email "github-actions[bot]@users.noreply.github.com"
-                  git config --global user.name "github-actions[bot]"
-                  git tag -a ${{ github.event.inputs.tag }} -m "push cicd"
-                  echo "VERSION=${{ github.event.inputs.tag }}" >> "$GITHUB_OUTPUT"
-          
-            - name: Push Tag
-              if: github.event.inputs.tag != ''
-              run: git push --follow-tags
-              
-            - name: Push Release
-              if: github.event.inputs.tag != ''
-              uses: ncipollo/release-action@v1
-              with:
-                generateReleaseNotes: true
-                artifacts: "Dockerfile"
-                tag: ${{ steps.release.outputs.VERSION }}
+      - name: Pull Docker Image
+        run: docker pull giovanni2002ynov/cicd:no-use
+
+      - name: Release
+        if: github.event.inputs.tag != ''
+        id: release
+        run: |
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+          git tag -a ${{ github.event.inputs.tag }} -m "push cicd"
+          echo "VERSION=${{ github.event.inputs.tag }}" >> "$GITHUB_OUTPUT"
+      
+      - name: Push Tag
+        if: github.event.inputs.tag != ''
+        run: git push --follow-tags
+        
+      - name: Push Release
+        if: github.event.inputs.tag != ''
+        uses: ncipollo/release-action@v1
+        with:
+          generateReleaseNotes: true
+          artifacts: "Dockerfile"
+          tag: ${{ steps.release.outputs.VERSION }}
