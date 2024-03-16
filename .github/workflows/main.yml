@@ -39,6 +39,7 @@ jobs:
             - name: php stan
               run: |
                 composer require --dev phpstan/phpstan
+                vendor/bin/phpstan analyse src tests
             - uses: php-actions/phpstan@v3
-              run: |
-                cd /var/www/app
+              with:
+                path: /var/www/app
