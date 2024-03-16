@@ -45,9 +45,6 @@ jobs:
           name: Artifacts
           path: Dockerfile
 
-      - name: Pull Docker Image
-        run: docker pull giovanni2002ynov/cicd:no-use
-
       - name: Release
         if: github.event.inputs.tag != ''
         id: release
@@ -68,3 +65,12 @@ jobs:
           generateReleaseNotes: true
           artifacts: "Dockerfile"
           tag: ${{ steps.release.outputs.VERSION }}
+  CDeployment:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Récuperation de l'image
+        run: |
+          docker pull giovanni2002ynov/cicd:no-use
+          docker run --rm -itu 1000 giovanni2002ynov/cicd:no-use php bin/console
