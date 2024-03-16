@@ -36,3 +36,6 @@ jobs:
                 composer install
             - name: php unit
               run: php phpunit-9.6.phar 
+            - name: php stan
+              run: |
+                composer require --dev phpstan/phpstan
