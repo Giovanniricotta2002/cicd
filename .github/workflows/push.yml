@@ -70,7 +70,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      #docker pull giovanni2002ynov/cicd:no-use
       - name: Récuperation de l'image
         run: |
-          docker pull giovanni2002ynov/cicd:no-use
           docker run --rm -itu 1000 giovanni2002ynov/cicd:no-use php bin/console
+        
