@@ -40,5 +40,5 @@ jobs:
               run: |
                 composer require --dev phpstan/phpstan
             - uses: php-actions/phpstan@v3
-              with:
-                path: /var/www/app
+              run: |
+                cd /var/www/app
