@@ -41,4 +41,4 @@ jobs:
                 composer require --dev phpstan/phpstan
             - uses: php-actions/phpstan@v3
               with:
-                path: src/
+                path: /var/www/app
