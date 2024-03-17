@@ -22,7 +22,7 @@ jobs:
         - name: test
           run: ls /var/www/app
         - name: test2
-          run: ls /var/www/app/tests/
+          run: cat /var/www/app/tests/someTest.php
     CI:
         runs-on: ubuntu-latest
         container:
