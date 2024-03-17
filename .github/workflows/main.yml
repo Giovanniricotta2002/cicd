@@ -54,6 +54,6 @@ jobs:
             - name: php actor
               run: |
                 curl -Lo phpactor.phar https://github.com/phpactor/phpactor/releases/latest/download/phpactor.phar
-                pwd phpactor.phar
+                # pwd phpactor.phar
                 chmod a+x /__w/cicd/cicd/phpactor.phar
-                # phpactor.phar status
+                /__w/cicd/cicd/phpactor.phar status
