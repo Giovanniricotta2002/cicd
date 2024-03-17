@@ -107,6 +107,7 @@ jobs:
           
   CDeployment:
       runs-on: ubuntu-latest
+      needs: [ CDelivery ]
       container:
         image: giovanni2002ynov/cicd:no-use
         volumes:
