@@ -50,7 +50,6 @@ jobs:
           run: |
             cd /var/www/app 
             curl -Lo phpactor.phar https://github.com/phpactor/phpactor/releases/latest/download/phpactor.phar
-            # pwd phpactor.phar
             chmod a+x /var/www/app/phpactor.phar
             /var/www/app/phpactor.phar status
   CDelivery:
@@ -78,6 +77,9 @@ jobs:
           push: ${{github.event.inputs.tag != ''}}
           tags: giovanni2002ynov/cicd:no-use
           labels: cicd
+          
+      - name: Copy Test File to Docker Image
+        run: docker cp /var/www/my_app/cicd/tests/bootstrap.php giovanni2002ynov/cicd:no-use:/var/www/app/tests/bootstrap.php
 
       - name: capture build artifacts
         uses: actions/upload-artifact@v3
@@ -105,13 +107,14 @@ jobs:
           generateReleaseNotes: true
           artifacts: "Dockerfile"
           tag: ${{ steps.release.outputs.VERSION }}
+          
   CDeployment:
     runs-on: ubuntu-latest
     needs: [ CDelivery ]
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install Docker Image
+      - name: Pull Docker Image
         run: docker pull giovanni2002ynov/cicd:no-use
       
       - name: Run Cat Command
