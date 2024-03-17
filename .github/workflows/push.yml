@@ -78,8 +78,7 @@ jobs:
           tags: giovanni2002ynov/cicd:no-use
           labels: cicd
           
-      - name: Copy Test File to Docker Image
-        run: docker cp /var/www/my_app/cicd/tests/bootstrap.php giovanni2002ynov/cicd:no-use:/var/www/app/tests/bootstrap.php
+
 
       - name: capture build artifacts
         uses: actions/upload-artifact@v3
@@ -118,4 +117,4 @@ jobs:
         run: docker pull giovanni2002ynov/cicd:no-use
       
       - name: Run Cat Command
-        run: docker run giovanni2002ynov/cicd:no-use cat /var/www/my_app/cicd/tests/bootstrap.php
+        run: docker run giovanni2002ynov/cicd:no-use cat /var/www/app/cicd/tests/bootstrap.php
