@@ -109,5 +109,4 @@ jobs:
       - name: Pull docker image
         run: docker pull giovanni2002ynov/cicd:no-use
       - name: Verifie l'image
-        run: bash verify_docker_image.sh
-        
+        run: bash /var/www/app/tests/verify_docker_image.sh
