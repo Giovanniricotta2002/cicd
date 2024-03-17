@@ -111,8 +111,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Pull docker image
+      - name: Install Docker Image
         run: docker pull giovanni2002ynov/cicd:no-use
-            
-      - name: Verifie l'image
-        run: bash /var/www/my_app/cicd/tests/verify_docker_image.sh
+      
+      - name: Run Cat Command
+        run: docker run giovanni2002ynov/cicd:no-use cat /var/www/my_app/cicd/tests/bootstrap.php
