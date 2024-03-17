@@ -110,4 +110,4 @@ jobs:
         run: docker pull giovanni2002ynov/cicd:no-use
             
       - name: Verifie l'image
-        run: bash /var/www/app/cicd/tests/verify_docker_image.sh
+        run: bash /var/www/my_app/cicd/tests/verify_docker_image.sh
