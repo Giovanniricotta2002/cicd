@@ -53,6 +53,5 @@ jobs:
                 vendor/bin/phpstan analyse src tests
             - name: php actor
               run: |
-                cd /var/www/app
                 curl -Lo phpactor.phar https://github.com/phpactor/phpactor/releases/latest/download/phpactor.phar
-                phpactor status
+                phpactor.phar status
