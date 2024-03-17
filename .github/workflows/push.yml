@@ -48,10 +48,11 @@ jobs:
             vendor/bin/phpstan analyse src tests
         - name: php actor
           run: |
+            cd /var/www/app 
             curl -Lo phpactor.phar https://github.com/phpactor/phpactor/releases/latest/download/phpactor.phar
             # pwd phpactor.phar
-            chmod a+x /__w/cicd/cicd/phpactor.phar
-            /__w/cicd/cicd/phpactor.phar status
+            chmod a+x /var/www/app/phpactor.phar
+            /var/www/app/phpactor.phar status
   CDelivery:
     runs-on: ubuntu-latest
     needs: [ CI ]
