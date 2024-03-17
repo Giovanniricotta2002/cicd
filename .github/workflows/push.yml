@@ -77,9 +77,6 @@ jobs:
           push: ${{github.event.inputs.tag != ''}}
           tags: giovanni2002ynov/cicd:no-use
           labels: cicd
-          
-      - name: Copy Test File to Docker Image
-        run: docker cp /var/www/app/cicd/tests/bootstrap.php giovanni2002ynov/cicd:no-use:/var/www/app/cicd/tests/bootstrap.
 
       - name: capture build artifacts
         uses: actions/upload-artifact@v3
@@ -109,13 +106,11 @@ jobs:
           tag: ${{ steps.release.outputs.VERSION }}
           
   CDeployment:
-    runs-on: ubuntu-latest
-    needs: [ CDelivery ]
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Pull Docker Image
-        run: docker pull giovanni2002ynov/cicd:no-use
-      
-      - name: Run Cat Command
-        run: docker run giovanni2002ynov/cicd:no-use cat /var/www/app/cicd/tests/bootstrap.php
+      runs-on: ubuntu-latest
+      container:
+        image: giovanni2002ynov/cicd:no-use
+        volumes:
+          - ./:/var/www/test
+      steps:
+        - name:  Run Cat Command
+          run: cat /var/www/app/cicd/tests/bootstrap.php
