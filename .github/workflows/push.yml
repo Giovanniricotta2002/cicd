@@ -1,6 +1,10 @@
 # run tests manually in the Actions-tab of the project
 name: Oral
 on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
   workflow_dispatch:
     # Inputs the workflow accepts.
     inputs:
@@ -36,8 +40,14 @@ jobs:
           run: |
             ls
             composer install
+            composer require --dev phpstan/phpstan
         - name: php unit
-          run: php phpunit-9.6.phar 
+          run: php phpunit-9.6.phar
+        - name: php stan
+          run: vendor/bin/phpstan analyse src tests
+        #- uses: php-actions/phpstan@v3
+        #  with:
+        #    path: /var/www/app
   CDelivery:
     runs-on: ubuntu-latest
     needs: [ CI ]
