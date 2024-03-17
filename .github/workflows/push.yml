@@ -107,7 +107,7 @@ jobs:
           
   CDeployment:
       runs-on: ubuntu-latest
-      needs: [ CDelivery ]
+      # needs: [ CDelivery ]
       container:
         image: giovanni2002ynov/cicd:no-use
         volumes:
@@ -115,5 +115,5 @@ jobs:
       steps:
         - name:  Run Cat Command
           run: |
-            ls
+            ls /var/www/app
            # cat /var/www/app/cicd/tests/bootstrap.php
