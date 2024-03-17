@@ -114,4 +114,6 @@ jobs:
           - ./:/var/www/test
       steps:
         - name:  Run Cat Command
-          run: cat /var/www/app/cicd/tests/bootstrap.php
+          run: |
+            ls
+           # cat /var/www/app/cicd/tests/bootstrap.php
