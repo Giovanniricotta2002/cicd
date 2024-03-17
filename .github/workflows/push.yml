@@ -14,8 +14,33 @@ permissions:
   actions: read
   checks: write
 jobs:
+  CI:
+    runs-on: ubuntu-latest
+    container:
+      image: php:8.2-cli
+      volumes:
+        - ./:/var/www/app
+    steps:
+        - uses: actions/checkout@v4
+        - name: apt install
+          run: apt-get -qq update && apt-get -qq install libpq-dev unzip libgd-dev libicu-dev curl locales -y
+        - name: install composer and phpunit
+          run: |
+            curl https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+            curl -LO https://phar.phpunit.de/phpunit-9.6.phar
+            whereis phpunit-9.6.phar
+        - name: move
+          run: |
+            cd /var/www/app
+        - name: compose install
+          run: |
+            ls
+            composer install
+        - name: php unit
+          run: php phpunit-9.6.phar 
   CDelivery:
     runs-on: ubuntu-latest
+    needs: [ CI ]
     steps:
       - uses: actions/checkout@v4
 
