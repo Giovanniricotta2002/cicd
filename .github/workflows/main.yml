@@ -20,9 +20,9 @@ jobs:
           - ./:/var/www/test
       steps:
         - name: test
-          run: |
-            ls
-            ls /var/www/app
+          run: ls /var/www/app
+        - name: test2
+          run: cat /var/www/app/tests/MathTest.php
     CI:
         runs-on: ubuntu-latest
         container:
