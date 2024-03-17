@@ -55,4 +55,4 @@ jobs:
               run: |
                 curl -Lo phpactor.phar https://github.com/phpactor/phpactor/releases/latest/download/phpactor.phar
                 chmod a+x phpactor.phar
-                phpactor status
+                phpactor.phar status
