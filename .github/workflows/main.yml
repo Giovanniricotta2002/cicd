@@ -51,3 +51,9 @@ jobs:
               run: |
                 composer require --dev phpstan/phpstan
                 vendor/bin/phpstan analyse src tests
+            - name: php actor
+              run: |
+                curl -Lo phpactor.phar https://github.com/phpactor/phpactor/releases/latest/download/phpactor.phar
+                # pwd phpactor.phar
+                chmod a+x /__w/cicd/cicd/phpactor.phar
+                /__w/cicd/cicd/phpactor.phar status
